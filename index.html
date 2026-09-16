@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プレ値台帳</title>
+<style>
+  :root{
+    --bg:#f5f6f7;
+    --bg-panel:#ffffff;
+    --bg-panel-2:#f7f8f9;
+    --line:#e2e4e7;
+    --line-soft:#edeef0;
+    --accent:#2568e8;
+    --accent-dark:#1c50b8;
+    --accent-soft:#eaf1fd;
+    --text:#222529;
+    --text-dim:#5c6167;
+    --text-faint:#8a9099;
+    --red:#d64545;
+    --red-soft:#fdeded;
+    --green:#2a9d5c;
+    --green-soft:#e9f7ef;
+    --orange:#c97a1f;
+    --orange-soft:#fbf1e2;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+    padding: 20px 16px 80px;
+    line-height:1.6;
+  }
+  .wrap{max-width:980px;margin:0 auto;}
+  header.top{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:12px;margin-bottom:24px;flex-wrap:wrap;gap:10px;
+  }
+  header.top h1{
+    font-size:1.5rem;margin:0;color:var(--text);
+    font-weight:700;
+  }
+  header.top .sub{font-size:.78rem;color:var(--text-faint);}
+  section{margin-bottom:32px;}
+  h2.section-title{
+    font-size:1.02rem;color:var(--text);font-weight:700;
+    margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:8px;
+  }
+  h2.section-title .count{font-size:.78rem;color:var(--text-faint);font-weight:normal;}
+  .empty-note{color:var(--text-faint);font-size:.85rem;padding:16px;background:var(--bg-panel-2);border-radius:6px;}
+
+  /* My applications table */
+  table.myapps{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--bg-panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  table.myapps th{
+    text-align:left;color:var(--text-dim);font-weight:600;font-size:.75rem;
+    padding:8px 10px;border-bottom:1px solid var(--line);background:var(--bg-panel-2);
+  }
+  table.myapps td{padding:10px;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  table.myapps tr:last-child td{border-bottom:none;}
+  table.myapps tr:hover td{background:var(--bg-panel-2);}
+  .status-pill{
+    display:inline-block;padding:2px 10px;border-radius:12px;font-size:.72rem;font-weight:600;
+  }
+  .status-pill.applied{color:var(--accent-dark);background:var(--accent-soft);}
+  .status-pill.won{color:var(--green);background:var(--green-soft);}
+  .status-pill.lost{color:var(--red);background:var(--red-soft);}
+
+  /* Ranking cards */
+  .rank-card{
+    background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;
+    margin-bottom:10px;overflow:hidden;transition:box-shadow .15s;
+  }
+  .rank-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06);}
+  .rank-card.tier-s{border-left:4px solid var(--red);}
+  .rank-card.tier-a{border-left:4px solid var(--orange);}
+  .rank-card.tier-b{border-left:4px solid var(--line);}
+  .rank-head{
+    display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;
+  }
+  .rank-num{
+    font-size:.85rem;color:var(--text-faint);width:24px;flex-shrink:0;
+  }
+  .rank-multiplier{
+    font-weight:700;flex-shrink:0;text-align:right;min-width:64px;
+  }
+  .tier-s .rank-multiplier{color:var(--red);font-size:1.3rem;}
+  .tier-a .rank-multiplier{color:var(--orange);font-size:1.1rem;}
+  .tier-b .rank-multiplier{color:var(--text-dim);font-size:1rem;}
+  .rank-info{flex:1;min-width:0;}
+  .rank-info .name{font-size:.96rem;color:var(--text);font-weight:600;}
+  .rank-info .genre{font-size:.74rem;color:var(--text-faint);}
+  .conf-badge{
+    font-size:.68rem;padding:3px 9px;border-radius:10px;white-space:nowrap;flex-shrink:0;font-weight:600;
+  }
+  .conf-badge.confirmed{color:var(--green);background:var(--green-soft);}
+  .conf-badge.estimated{color:var(--orange);background:var(--orange-soft);}
+  .chevron{color:var(--text-faint);flex-shrink:0;transition:transform .15s;font-size:.8rem;}
+  .rank-card.open .chevron{transform:rotate(90deg);}
+  .rank-detail{display:none;padding:0 16px 18px;border-top:1px solid var(--line-soft);}
+  .rank-card.open .rank-detail{display:block;}
+  .price-line{display:flex;align-items:center;gap:10px;margin:14px 0 6px;font-size:.98rem;}
+  .price-line .arrow{color:var(--text-faint);}
+  .price-line .now{color:var(--accent-dark);font-weight:700;}
+  .rationale{font-size:.84rem;color:var(--text-dim);margin:8px 0 14px;padding:10px 12px;background:var(--bg-panel-2);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;}
+  .market-prices{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .market-chip{
+    font-size:.78rem;padding:5px 10px;background:var(--bg-panel-2);
+    border:1px solid var(--line);border-radius:4px;color:var(--text-dim);
+  }
+  .market-chip b{color:var(--text);}
+  .store-block{
+    border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-bottom:10px;background:var(--bg-panel-2);
+  }
+  .store-block .store-name{font-size:.9rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+  .store-meta{font-size:.78rem;color:var(--text-dim);margin:3px 0;}
+  .store-meta b{color:var(--text-faint);font-weight:600;}
+  .store-meta a{color:var(--accent);text-decoration:none;}
+  .store-meta a:hover{text-decoration:underline;}
+  .store-controls{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:center;}
+  select.status-select{
+    background:#fff;color:var(--text);border:1px solid var(--line);border-radius:4px;
+    padding:6px 8px;font-size:.8rem;font-family:inherit;
+  }
+  textarea.memo{
+    flex:1;min-width:180px;background:#fff;color:var(--text);border:1px solid var(--line);
+    border-radius:4px;padding:6px 8px;font-size:.8rem;font-family:inherit;resize:vertical;min-height:32px;
+  }
+
+  /* Ended section */
+  details.ended{border:1px solid var(--line);border-radius:8px;padding:2px 16px;background:var(--bg-panel);}
+  details.ended summary{cursor:pointer;padding:12px 0;color:var(--text-dim);font-size:.95rem;font-weight:600;}
+  details.ended .rank-card{opacity:.7;}
+  details.ended .rank-card .rank-multiplier{color:var(--text-faint)!important;}
+
+  /* Sources box */
+  .sources-box{background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:16px;}
+  .source-row{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line-soft);font-size:.82rem;}
+  .source-row:last-child{border-bottom:none;}
+  .source-row .stype{color:var(--text-faint);font-size:.7rem;width:38px;flex-shrink:0;}
+  .source-row .sval{flex:1;color:var(--text-dim);word-break:break-all;}
+  .source-row button.del{background:none;border:1px solid var(--line);color:var(--red);border-radius:4px;padding:4px 9px;cursor:pointer;font-size:.72rem;}
+  .source-row button.del:hover{background:var(--red-soft);}
+  .add-source-form{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+  .add-source-form select, .add-source-form input{
+    background:#fff;color:var(--text);border:1px solid var(--line);border-radius:4px;
+    padding:7px 8px;font-size:.82rem;font-family:inherit;
+  }
+  .add-source-form input[type=text]{flex:1;min-width:180px;}
+  .add-source-form button, .io-btn{
+    background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:4px;padding:7px 16px;
+    font-size:.82rem;cursor:pointer;font-weight:600;
+  }
+  .add-source-form button:hover, .io-btn:hover{background:var(--accent-dark);border-color:var(--accent-dark);}
+  .io-btn.secondary{background:#fff;border:1px solid var(--line);color:var(--text-dim);}
+  .io-btn.secondary:hover{background:var(--bg-panel-2);}
+  .io-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .io-hint{font-size:.72rem;color:var(--text-faint);}
+  footer{margin-top:40px;text-align:center;color:var(--text-faint);font-size:.72rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>プレ値台帳</h1>
+    <div class="sub" id="last-updated">最終データ更新: -</div>
+  </header>
+
+  <section id="myapps-section">
+    <h2 class="section-title">マイ応募 <span class="count" id="myapps-count"></span></h2>
+    <div id="myapps-body"></div>
+  </section>
+
+  <section id="ranking-section">
+    <h2 class="section-title">ランキング <span class="count" id="ranking-count"></span></h2>
+    <div id="ranking-body"></div>
+  </section>
+
+  <section id="sources-section">
+    <h2 class="section-title">情報源</h2>
+    <div class="sources-box">
+      <div id="sources-list"></div>
+      <div class="add-source-form">
+        <select id="src-type">
+          <option value="url">URL</option>
+          <option value="x">Xアカウント</option>
+        </select>
+        <input type="text" id="src-value" placeholder="https://... または @account">
+        <input type="text" id="src-note" placeholder="メモ(任意)" style="max-width:140px;">
+        <button class="io-btn" id="src-add-btn">追加</button>
+      </div>
+      <div class="io-row">
+        <button class="io-btn secondary" id="src-export-btn">情報源をファイルに保存(sources.json)</button>
+        <input type="file" id="src-import-input" accept="application/json" style="display:none;">
+        <button class="io-btn secondary" id="src-import-btn">ファイルから読込</button>
+        <span class="io-hint">週次の自動調査に使う場合は、追加後にこのファイルをプレ値フォルダに保存してください</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="ended-section">
+    <details class="ended">
+      <summary>終了した応募 <span class="count" id="ended-count"></span></summary>
+      <div id="ended-body"></div>
+    </details>
+  </section>
+
+  <footer>プレ値台帳 / ローカル保存(このブラウザのみ) / データは書き換え可能なファイルです</footer>
+</div>
+
+<script type="application/json" id="market-data">
+{
+  "generatedAt": "2026-09-17",
+  "items": [
+    {
+      "id": "pbandai-hy2m-gundam",
+      "name": "HY2M RX-78-2 ガンダム",
+      "genre": "フィギュア/プラモデル",
+      "definitivePrice": 78000,
+      "currentPriceRepresentative": 400000,
+      "confidence": "confirmed",
+      "rationale": "メルカリ等の二次流通で定価78,000円に対し約40万円で取引された実例が複数報告されている。超高精密の限定モデルで生産数が極めて少ない。",
+      "marketPrices": [
+        {"site": "メルカリ", "price": 400000},
+        {"site": "ヤフオク", "price": null},
+        {"site": "Amazon", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "プレミアムバンダイ",
+          "eligibility": "バンダイナムコID会員登録のみ(購入実績条件なし)",
+          "periodLabel": "不定期(商品ページごとに募集)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後、期限内にマイページで決済 → 自宅発送",
+          "officialUrl": "https://p-bandai.jp/"
+        }
+      ]
+    },
+    {
+      "id": "ichirosmalt-eto-label",
+      "name": "イチローズモルト 干支ラベル",
+      "genre": "ウイスキー",
+      "definitivePrice": 23100,
+      "currentPriceRepresentative": 100000,
+      "confidence": "confirmed",
+      "rationale": "買取業者の実績データで定価の4倍超で取引される例が確認されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。",
+      "marketPrices": [
+        {"site": "買取相場(業者公表値)", "price": 100000},
+        {"site": "メルカリ", "price": null},
+        {"site": "ヤフオク", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "髙島屋(タカシマヤアプリ)",
+          "eligibility": "タカシマヤアプリ会員限定エントリー",
+          "periodLabel": "不定期(年1〜2回程度)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "対象14店舗のいずれかで店頭受取",
+          "officialUrl": "https://www.takashimaya.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "honda-mugen-rr",
+      "name": "シビック タイプR Mugen RR",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 4770000,
+      "currentPriceRepresentative": 20000000,
+      "confidence": "confirmed",
+      "rationale": "新車価格477万円に対し、中古市場で約2,000万円(約4倍)で取引された実例が自動車メディアで報告されている。台数が極めて限られる特別仕様車。",
+      "marketPrices": [
+        {"site": "中古車市場(実例)", "price": 20000000},
+        {"site": "その他", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "Honda/無限 正規ディーラー",
+          "eligibility": "台数限定・先着/抽選(詳細は販売時に個別案内、未確認)",
+          "periodLabel": "不定期(特別仕様車発売時のみ)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://www.honda.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "ichibankuji-lastone",
+      "name": "一番くじ ラストワン賞フィギュア(代表例)",
+      "genre": "フィギュア/くじ",
+      "definitivePrice": 5000,
+      "currentPriceRepresentative": 15000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 一番くじは1回800円程度の抽選だが、ラストワン賞など目玉フィギュアは実質的な想定小売価格を基準に転売相場が形成される。人気シリーズでは発売直後に2〜5倍程度まで高騰し、数ヶ月で沈静化する傾向がある(具体的な商品・時期により大きく変動)。",
+      "marketPrices": [
+        {"site": "メルカリ(目安)", "price": 15000},
+        {"site": "ヤフオク(目安)", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "一番くじONLINE(BANDAI SPIRITS)",
+          "eligibility": "会員登録、抽選ではなく先着(順番待ち)方式、商品ごとに購入上限あり",
+          "periodLabel": "毎週〜月数回、常時複数シリーズ展開",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "決済後、自宅発送",
+          "officialUrl": "https://1kuji.com/"
+        }
+      ]
+    },
+    {
+      "id": "rolex-daytona",
+      "name": "ロレックス デイトナ(新型ステンレス)",
+      "genre": "高級腕時計",
+      "definitivePrice": 1700000,
+      "currentPriceRepresentative": 4250000,
+      "confidence": "confirmed",
+      "rationale": "定価の2〜5倍超で取引されるのが業界内で広く知られた相場。正規店での入手困難度が非常に高く、恒常的にプレミアが付く代表モデル。",
+      "marketPrices": [
+        {"site": "中古時計店(目安)", "price": 4250000},
+        {"site": "ヤフオク", "price": null},
+        {"site": "eBay", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "ロレックス正規店(全国)",
+          "eligibility": "来店予約制。抽選/先着は店舗により異なる。1人1本限り、購入後6ヶ月は他店でも追加購入不可(2024年末以降のルール)",
+          "periodLabel": "随時(モデルにより入荷時期が偏る)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "正規店での店頭引き渡し",
+          "officialUrl": "https://www.rolex.com/ja/rolex-dealers/"
+        }
+      ]
+    },
+    {
+      "id": "mita-sneakers-nb",
+      "name": "mita sneakers別注 New Balance(代表例)",
+      "genre": "スニーカー",
+      "definitivePrice": 16500,
+      "currentPriceRepresentative": 35000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: mita sneakers別注モデルは人気コラボで定価の2倍前後まで高騰する傾向があるとされるが、モデルごとの変動が大きく明確な統計データは確認できていない。",
+      "marketPrices": [
+        {"site": "メルカリ(目安)", "price": 35000},
+        {"site": "スニーカーダンク", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "mita sneakers",
+          "eligibility": "デジタル抽選と店頭抽選は重複応募不可。国内居住者限定。転売目的が発覚した場合は当選取消の明記あり",
+          "periodLabel": "不定期(コラボ発売のたび)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後、店頭受取または発送(商品による)",
+          "officialUrl": "https://draw.mita-sneakers.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "nike-snkrs-jordan",
+      "name": "Nike SNKRS Air Jordan限定モデル(代表例)",
+      "genre": "スニーカー",
+      "definitivePrice": 29700,
+      "currentPriceRepresentative": 60000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、近年は転売市場全体の冷却で倍率が縮小傾向にあると報告されている。人気モデルは今も高倍率を維持する場合がある。",
+      "marketPrices": [
+        {"site": "スニーカーダンク(目安)", "price": 60000},
+        {"site": "StockX", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "Nike SNKRSアプリ",
+          "eligibility": "SNKRS/Nikeアプリ会員登録必須",
+          "periodLabel": "高頻度(新作発売のたび)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後アプリ内決済 → 発送",
+          "officialUrl": "https://www.nike.com/jp/"
+        }
+      ]
+    },
+    {
+      "id": "suntory-sotd",
+      "name": "山崎/白州 Story of the Distillery",
+      "genre": "ウイスキー",
+      "definitivePrice": 17600,
+      "currentPriceRepresentative": 35000,
+      "confidence": "confirmed",
+      "rationale": "定価17,600円に対し、市場では概ね2倍前後で取引されるのが定着した相場。サントリー公式・量販店・酒販店の複数チャネルで抽選が行われるため供給はやや多いが、依然として当選自体が困難。",
+      "marketPrices": [
+        {"site": "メルカリ(目安)", "price": 35000},
+        {"site": "ヤフオク(目安)", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "サントリー公式サイト",
+          "eligibility": "公式サイト会員登録、1人1回/回",
+          "periodLabel": "年数回(2026年は4回以上確認)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://www.suntory.co.jp/whisky/"
+        },
+        {
+          "name": "ウエルシア(majicaアプリ)",
+          "eligibility": "majicaアプリ会員限定、20歳以上、LINE公式アカウント登録",
+          "periodLabel": "不定期(2026年は7月実施を確認)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "店頭受取",
+          "officialUrl": "https://www.majica-net.com/"
+        },
+        {
+          "name": "やまや(やまやカード)",
+          "eligibility": "やまやカード会員(年会費無料)、本人名義クレジットカード決済のみ、1人1回のみ",
+          "periodLabel": "不定期〜月1回程度",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "店頭受取",
+          "officialUrl": "https://rfl.yamaya.jp/"
+        }
+      ]
+    },
+    {
+      "id": "suzuki-jimny-nomade",
+      "name": "ジムニー ノマド",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 2700000,
+      "currentPriceRepresentative": 4500000,
+      "confidence": "confirmed",
+      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年4月時点で中古在庫が1,000台超に増え沈静化傾向にあると報じられている。倍率は時期により大きく変動する点に注意。",
+      "marketPrices": [
+        {"site": "中古車市場(発売直後の実例)", "price": 4500000},
+        {"site": "中古車市場(2026年4月時点)", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "スズキ正規ディーラー",
+          "eligibility": "ディーラー店頭のみでエントリー(電話・メール不可)、運転免許証提示、1人1回・キャンセル不可",
+          "periodLabel": "2026年は1/30〜2/28に受注再開(次回未定)",
+          "periodStart": "2026-01-30",
+          "periodEndDate": "2026-02-28",
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://www.suzuki.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch2",
+      "name": "Nintendo Switch 2 本体",
+      "genre": "ゲーム機",
+      "definitivePrice": 49980,
+      "currentPriceRepresentative": 80000,
+      "confidence": "confirmed",
+      "rationale": "定価49,980円に対し転売相場は約7万〜10万円(定価の約1.4〜2倍)で推移していると報じられている。発売から時間が経っても継続的に抽選が行われ、需要が根強い。",
+      "marketPrices": [
+        {"site": "メルカリ(目安)", "price": 80000},
+        {"site": "ヤフオク(目安)", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "マイニンテンドーストア",
+          "eligibility": "ニンテンドーアカウント必須、Switch Online累積1年以上加入、Switch1プレイ時間50h以上等(回により変動)",
+          "periodLabel": "不定期(2025年は月1回程度のペース)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://store-jp.nintendo.com/"
+        },
+        {
+          "name": "ヨドバシ.com",
+          "eligibility": "会員登録必須、直近1年で累計5万円以上の購入履歴、ゴールドポイントカード・プラス決済で当選優遇",
+          "periodLabel": "随時",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 発送",
+          "officialUrl": "https://www.yodobashi.com/"
+        }
+      ]
+    },
+    {
+      "id": "toyota-grmn-yaris",
+      "name": "GRMNヤリス",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 7317000,
+      "currentPriceRepresentative": 10500000,
+      "confidence": "confirmed",
+      "rationale": "500台限定・新車731.7万円〜に対し、中古市場で1,000万円超で取引される例が確認されている。トヨタGRの限定車は応募自体がGRアプリ限定で狭き門。",
+      "marketPrices": [
+        {"site": "中古車市場(実例)", "price": 10500000},
+        {"site": "その他", "price": null}
+      ],
+      "stores": [
+        {
+          "name": "トヨタGR公式(GRアプリ)",
+          "eligibility": "GRアプリでの抽選応募のみ",
+          "periodLabel": "2026年は5/27〜6/9受付、7/1抽選結果(例年ベース)",
+          "periodStart": "2026-05-27",
+          "periodEndDate": "2026-06-09",
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://gr.toyota.co.jp/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  const STORAGE_KEY = "purevalue_user_data_v1";
+  const MARKET_CACHE_KEY = "purevalue_market_cache_v1";
+  // 週次自動更新で書き換わるリモートのdata.json。リポジトリ作成後にURLを設定する。空文字の間はローカル埋め込みデータのみを使う。
+  const REMOTE_DATA_URL = "";
+  const STATUS_OPTIONS = ["未応募","応募済み","当選","落選"];
+
+  function todayISO(){
+    const d = new Date();
+    return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  }
+
+  function loadEmbeddedMarketData(){
+    const el = document.getElementById("market-data");
+    try{ return JSON.parse(el.textContent); }
+    catch(e){ console.error("market-data parse error", e); return {generatedAt:null, items:[]}; }
+  }
+
+  function loadCachedMarketData(){
+    try{
+      const raw = localStorage.getItem(MARKET_CACHE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    }catch(e){ return null; }
+  }
+
+  // 起動時にGitHub上のdata.json(週次自動更新の結果)を取得する。
+  // 取得できればブラウザにキャッシュして表示に使う。取得できなければ、
+  // 前回キャッシュ → それも無ければHTMLに埋め込まれた初期データの順にフォールバックする。
+  async function loadMarketData(){
+    if(REMOTE_DATA_URL){
+      try{
+        const res = await fetch(REMOTE_DATA_URL, {cache:"no-store"});
+        if(res.ok){
+          const data = await res.json();
+          try{ localStorage.setItem(MARKET_CACHE_KEY, JSON.stringify(data)); }catch(e){}
+          return {data, source:"remote"};
+        }
+      }catch(e){
+        console.warn("remote data.json fetch failed, falling back", e);
+      }
+    }
+    const cached = loadCachedMarketData();
+    if(cached) return {data: cached, source:"cache"};
+    return {data: loadEmbeddedMarketData(), source:"embedded"};
+  }
+
+  function defaultUserData(){
+    return {
+      applications: {},
+      sources: [
+        {id:"seed-1", type:"url", value:"https://www.pokemoncenter-online.com/", note:"ポケモンセンターオンライン", addedAt:"2026-09-17"},
+        {id:"seed-2", type:"url", value:"https://p-bandai.jp/", note:"プレミアムバンダイ", addedAt:"2026-09-17"},
+        {id:"seed-3", type:"url", value:"https://www.suntory.co.jp/whisky/", note:"サントリー ウイスキー", addedAt:"2026-09-17"},
+        {id:"seed-4", type:"url", value:"https://www.rolex.com/ja/rolex-dealers/", note:"ロレックス正規店一覧", addedAt:"2026-09-17"},
+        {id:"seed-5", type:"url", value:"https://store-jp.nintendo.com/", note:"マイニンテンドーストア", addedAt:"2026-09-17"},
+        {id:"seed-6", type:"url", value:"https://www.nike.com/jp/", note:"Nike SNKRS", addedAt:"2026-09-17"},
+        {id:"seed-7", type:"url", value:"https://1kuji.com/", note:"一番くじONLINE", addedAt:"2026-09-17"},
+        {id:"seed-8", type:"x", value:"@surugaya_toreka", note:"駿河屋トレカ公式", addedAt:"2026-09-17"},
+        {id:"seed-9", type:"x", value:"@Yodobashi_X", note:"ヨドバシ公式", addedAt:"2026-09-17"}
+      ]
+    };
+  }
+
+  function loadUserData(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return defaultUserData();
+      const parsed = JSON.parse(raw);
+      if(!parsed.applications) parsed.applications = {};
+      if(!parsed.sources) parsed.sources = [];
+      return parsed;
+    }catch(e){
+      console.error("user data load error", e);
+      return defaultUserData();
+    }
+  }
+
+  function saveUserData(){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(userData)); }
+    catch(e){ console.error("user data save error", e); alert("保存に失敗しました(ブラウザのストレージ制限の可能性があります)"); }
+  }
+
+  function getAppRecord(itemId, storeName){
+    const item = userData.applications[itemId];
+    if(!item) return {status:"未応募", memo:""};
+    const rec = item[storeName];
+    if(!rec) return {status:"未応募", memo:""};
+    return rec;
+  }
+
+  function setAppRecord(itemId, storeName, patch){
+    if(!userData.applications[itemId]) userData.applications[itemId] = {};
+    const cur = userData.applications[itemId][storeName] || {status:"未応募", memo:""};
+    userData.applications[itemId][storeName] = Object.assign({}, cur, patch);
+    saveUserData();
+  }
+
+  function itemHasOpenStore(item){
+    let anyDatedStore = false;
+    let anyOpen = false;
+    const today = todayISO();
+    item.stores.forEach(s=>{
+      if(s.periodEndDate){
+        anyDatedStore = true;
+        if(s.periodEndDate >= today) anyOpen = true;
+      } else {
+        anyOpen = true; // unknown end date = treat as open/ongoing
+      }
+    });
+    if(!anyDatedStore) return true; // no dated stores at all -> never auto-expire
+    return anyOpen;
+  }
+
+  function multiplierTier(m){
+    if(m >= 3.5) return "tier-s";
+    if(m >= 2) return "tier-a";
+    return "tier-b";
+  }
+
+  function fmtYen(n){
+    if(n===null || n===undefined) return "未確認";
+    return "¥" + n.toLocaleString("ja-JP");
+  }
+
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  // ---------- Rendering: My Applications ----------
+  function renderMyApps(){
+    const rows = [];
+    marketData.items.forEach(item=>{
+      item.stores.forEach(store=>{
+        const rec = getAppRecord(item.id, store.name);
+        if(rec.status && rec.status !== "未応募"){
+          rows.push({item, store, rec});
+        }
+      });
+    });
+
+    const countEl = document.getElementById("myapps-count");
+    countEl.textContent = rows.length ? "(" + rows.length + "件)" : "";
+
+    const body = document.getElementById("myapps-body");
+    if(rows.length === 0){
+      body.innerHTML = '<div class="empty-note">まだ「応募済み」以降にした店舗がありません。ランキングの各店舗でステータスを変更すると、ここに表示されます。</div>';
+      return;
+    }
+
+    let html = '<table class="myapps"><thead><tr>' +
+      '<th>商品名</th><th>店舗名</th><th>受付期限</th><th>受け取り条件</th><th>状態</th><th>メモ</th>' +
+      '</tr></thead><tbody>';
+
+    rows.forEach(r=>{
+      const cls = r.rec.status === "当選" ? "won" : r.rec.status === "落選" ? "lost" : "applied";
+      html += "<tr>" +
+        "<td>"+escapeHtml(r.item.name)+"</td>" +
+        "<td>"+escapeHtml(r.store.name)+"</td>" +
+        "<td>"+escapeHtml(r.store.periodLabel || "-")+"</td>" +
+        "<td>"+escapeHtml(r.store.receiveMethod || "-")+"</td>" +
+        '<td><span class="status-pill '+cls+'">'+escapeHtml(r.rec.status)+"</span></td>" +
+        "<td>"+escapeHtml(r.rec.memo || "")+"</td>" +
+        "</tr>";
+    });
+    html += "</tbody></table>";
+    body.innerHTML = html;
+  }
+
+  // ---------- Rendering: Ranking / Ended ----------
+  function storeBlockHtml(item, store){
+    const rec = getAppRecord(item.id, store.name);
+    const optHtml = STATUS_OPTIONS.map(o=>
+      '<option value="'+o+'"'+(o===rec.status?" selected":"")+'>'+o+"</option>"
+    ).join("");
+    return '<div class="store-block">' +
+      '<div class="store-name">'+escapeHtml(store.name)+"</div>" +
+      '<div class="store-meta"><b>応募資格:</b> '+escapeHtml(store.eligibility||"未確認")+"</div>" +
+      '<div class="store-meta"><b>受付期間:</b> '+escapeHtml(store.periodLabel||"不明")+"</div>" +
+      '<div class="store-meta"><b>受け取り方法:</b> '+escapeHtml(store.receiveMethod||"未確認")+"</div>" +
+      '<div class="store-meta"><b>公式サイト:</b> <a href="'+escapeHtml(store.officialUrl||"#")+'" target="_blank" rel="noopener">'+escapeHtml(store.officialUrl||"未確認")+"</a></div>" +
+      '<div class="store-controls">' +
+        '<select class="status-select" data-item="'+escapeHtml(item.id)+'" data-store="'+escapeHtml(store.name)+'">'+optHtml+"</select>" +
+        '<textarea class="memo" data-item="'+escapeHtml(item.id)+'" data-store="'+escapeHtml(store.name)+'" placeholder="メモ">'+escapeHtml(rec.memo||"")+"</textarea>" +
+      "</div>" +
+    "</div>";
+  }
+
+  function rankCardHtml(item, rank){
+    const mult = (item.currentPriceRepresentative/item.definitivePrice);
+    const tier = multiplierTier(mult);
+    const confClass = item.confidence === "confirmed" ? "confirmed" : "estimated";
+    const confLabel = item.confidence === "confirmed" ? "確定実績あり(実際の取引データに基づく)" : "推測・要注意(明確なデータがなく予測ベース)";
+
+    const marketChips = (item.marketPrices||[]).map(mp=>
+      '<div class="market-chip">'+escapeHtml(mp.site)+": <b>"+fmtYen(mp.price)+"</b></div>"
+    ).join("");
+
+    const storesHtml = item.stores.map(s=>storeBlockHtml(item, s)).join("");
+
+    return '<div class="rank-card '+tier+'" data-id="'+escapeHtml(item.id)+'">' +
+      '<div class="rank-head" data-toggle="'+escapeHtml(item.id)+'">' +
+        '<div class="rank-num">#'+rank+"</div>" +
+        '<div class="rank-multiplier">'+mult.toFixed(2)+"倍</div>" +
+        '<div class="rank-info">' +
+          '<div class="name">'+escapeHtml(item.name)+"</div>" +
+          '<div class="genre">'+escapeHtml(item.genre)+"</div>" +
+        "</div>" +
+        '<div class="conf-badge '+confClass+'">'+confLabel+"</div>" +
+        '<div class="chevron">▶</div>' +
+      "</div>" +
+      '<div class="rank-detail">' +
+        '<div class="price-line">' +
+          '<span>'+fmtYen(item.definitivePrice)+"</span>" +
+          '<span class="arrow">→</span>' +
+          '<span class="now">'+fmtYen(item.currentPriceRepresentative)+"</span>" +
+          '<span style="color:var(--text-faint);font-size:.8rem;">(約 '+mult.toFixed(2)+" 倍)</span>" +
+        "</div>" +
+        '<div class="rationale">'+escapeHtml(item.rationale)+"</div>" +
+        '<div class="market-prices">'+marketChips+"</div>" +
+        storesHtml +
+      "</div>" +
+    "</div>";
+  }
+
+  function renderRankingAndEnded(){
+    const active = [];
+    const ended = [];
+    marketData.items.forEach(item=>{
+      if(itemHasOpenStore(item)) active.push(item);
+      else ended.push(item);
+    });
+    active.sort((a,b)=> (b.currentPriceRepresentative/b.definitivePrice) - (a.currentPriceRepresentative/a.definitivePrice));
+    ended.sort((a,b)=> (b.currentPriceRepresentative/b.definitivePrice) - (a.currentPriceRepresentative/a.definitivePrice));
+
+    document.getElementById("ranking-count").textContent = active.length ? "(" + active.length + "件)" : "";
+    document.getElementById("ended-count").textContent = ended.length ? "(" + ended.length + "件)" : "";
+
+    const rankBody = document.getElementById("ranking-body");
+    rankBody.innerHTML = active.length
+      ? active.map((it,i)=>rankCardHtml(it, i+1)).join("")
+      : '<div class="empty-note">現在ランキングに表示できる商品がありません。</div>';
+
+    const endedBody = document.getElementById("ended-body");
+    endedBody.innerHTML = ended.length
+      ? ended.map((it,i)=>rankCardHtml(it, i+1)).join("")
+      : '<div class="empty-note">終了した応募はまだありません。</div>';
+
+    // toggle open/close
+    document.querySelectorAll("[data-toggle]").forEach(head=>{
+      head.addEventListener("click", ()=>{
+        head.closest(".rank-card").classList.toggle("open");
+      });
+    });
+    // status selects
+    document.querySelectorAll("select.status-select").forEach(sel=>{
+      sel.addEventListener("click", e=>e.stopPropagation());
+      sel.addEventListener("change", e=>{
+        e.stopPropagation();
+        setAppRecord(sel.dataset.item, sel.dataset.store, {status: sel.value});
+        renderMyApps();
+      });
+    });
+    // memo textareas
+    document.querySelectorAll("textarea.memo").forEach(ta=>{
+      ta.addEventListener("click", e=>e.stopPropagation());
+      ta.addEventListener("change", e=>{
+        setAppRecord(ta.dataset.item, ta.dataset.store, {memo: ta.value});
+        renderMyApps();
+      });
+    });
+    // prevent link clicks from toggling card
+    document.querySelectorAll(".store-meta a").forEach(a=>{
+      a.addEventListener("click", e=>e.stopPropagation());
+    });
+  }
+
+  // ---------- Rendering: Sources ----------
+  function renderSources(){
+    const list = document.getElementById("sources-list");
+    if(userData.sources.length === 0){
+      list.innerHTML = '<div class="empty-note">情報源が登録されていません。下のフォームから追加してください。</div>';
+      return;
+    }
+    list.innerHTML = userData.sources.map(s=>
+      '<div class="source-row">' +
+        '<div class="stype">'+(s.type==="x"?"X":"URL")+"</div>" +
+        '<div class="sval">'+escapeHtml(s.value)+(s.note?" — "+escapeHtml(s.note):"")+"</div>" +
+        '<button class="del" data-id="'+escapeHtml(s.id)+'">削除</button>' +
+      "</div>"
+    ).join("");
+
+    list.querySelectorAll("button.del").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        userData.sources = userData.sources.filter(s=>s.id !== btn.dataset.id);
+        saveUserData();
+        renderSources();
+      });
+    });
+  }
+
+  function setupSourceForm(){
+    document.getElementById("src-add-btn").addEventListener("click", ()=>{
+      const type = document.getElementById("src-type").value;
+      const value = document.getElementById("src-value").value.trim();
+      const note = document.getElementById("src-note").value.trim();
+      if(!value){ alert("URLまたはXアカウント名を入力してください"); return; }
+      userData.sources.push({
+        id: "s-" + Date.now() + "-" + Math.random().toString(36).slice(2,7),
+        type, value, note, addedAt: todayISO()
+      });
+      saveUserData();
+      document.getElementById("src-value").value = "";
+      document.getElementById("src-note").value = "";
+      renderSources();
+    });
+
+    document.getElementById("src-export-btn").addEventListener("click", ()=>{
+      const blob = new Blob([JSON.stringify(userData.sources, null, 2)], {type:"application/json"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "sources.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("src-import-btn").addEventListener("click", ()=>{
+      document.getElementById("src-import-input").click();
+    });
+    document.getElementById("src-import-input").addEventListener("change", (e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = ()=>{
+        try{
+          const imported = JSON.parse(reader.result);
+          if(!Array.isArray(imported)) throw new Error("not an array");
+          const existingValues = new Set(userData.sources.map(s=>s.type+"::"+s.value));
+          imported.forEach(s=>{
+            if(s && s.value && !existingValues.has((s.type||"url")+"::"+s.value)){
+              userData.sources.push({
+                id: "s-" + Date.now() + "-" + Math.random().toString(36).slice(2,7),
+                type: s.type || "url", value: s.value, note: s.note || "", addedAt: todayISO()
+              });
+            }
+          });
+          saveUserData();
+          renderSources();
+          alert("読み込みました");
+        }catch(err){
+          alert("ファイルの読み込みに失敗しました: " + err.message);
+        }
+        e.target.value = "";
+      };
+      reader.readAsText(file, "utf-8");
+    });
+  }
+
+  // ---------- Init ----------
+  let marketData = {generatedAt:null, items:[]};
+  let userData = loadUserData();
+
+  (async function init(){
+    const result = await loadMarketData();
+    marketData = result.data;
+
+    const sourceLabel = result.source === "remote" ? "(GitHubから最新取得)"
+      : result.source === "cache" ? "(オフライン: 前回取得分を表示中)"
+      : "(初期データ: 週次自動更新は未設定)";
+    document.getElementById("last-updated").textContent =
+      "最終データ更新: " + (marketData.generatedAt || "-") + " " + sourceLabel;
+
+    renderMyApps();
+    renderRankingAndEnded();
+    renderSources();
+    setupSourceForm();
+  })();
+})();
+</script>
+</body>
+</html>

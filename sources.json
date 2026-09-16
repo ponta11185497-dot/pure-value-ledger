@@ -1,0 +1,11 @@
+[
+  {"type": "url", "value": "https://www.pokemoncenter-online.com/", "note": "ポケモンセンターオンライン"},
+  {"type": "url", "value": "https://p-bandai.jp/", "note": "プレミアムバンダイ"},
+  {"type": "url", "value": "https://www.suntory.co.jp/whisky/", "note": "サントリー ウイスキー"},
+  {"type": "url", "value": "https://www.rolex.com/ja/rolex-dealers/", "note": "ロレックス正規店一覧"},
+  {"type": "url", "value": "https://store-jp.nintendo.com/", "note": "マイニンテンドーストア"},
+  {"type": "url", "value": "https://www.nike.com/jp/", "note": "Nike SNKRS"},
+  {"type": "url", "value": "https://1kuji.com/", "note": "一番くじONLINE"},
+  {"type": "x", "value": "@surugaya_toreka", "note": "駿河屋トレカ公式"},
+  {"type": "x", "value": "@Yodobashi_X", "note": "ヨドバシ公式"}
+]

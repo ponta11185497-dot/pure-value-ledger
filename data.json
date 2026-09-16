@@ -1,0 +1,374 @@
+{
+  "generatedAt": "2026-09-17",
+  "items": [
+    {
+      "id": "pbandai-hy2m-gundam",
+      "name": "HY2M RX-78-2 ガンダム",
+      "genre": "フィギュア/プラモデル",
+      "definitivePrice": 78000,
+      "currentPriceRepresentative": 400000,
+      "confidence": "confirmed",
+      "rationale": "メルカリ等の二次流通で定価78,000円に対し約40万円で取引された実例が複数報告されている。超高精密の限定モデルで生産数が極めて少ない。",
+      "marketPrices": [
+        {
+          "site": "メルカリ",
+          "price": 400000
+        },
+        {
+          "site": "ヤフオク",
+          "price": null
+        },
+        {
+          "site": "Amazon",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "プレミアムバンダイ",
+          "eligibility": "バンダイナムコID会員登録のみ(購入実績条件なし)",
+          "periodLabel": "不定期(商品ページごとに募集)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後、期限内にマイページで決済 → 自宅発送",
+          "officialUrl": "https://p-bandai.jp/"
+        }
+      ]
+    },
+    {
+      "id": "ichirosmalt-eto-label",
+      "name": "イチローズモルト 干支ラベル",
+      "genre": "ウイスキー",
+      "definitivePrice": 23100,
+      "currentPriceRepresentative": 100000,
+      "confidence": "confirmed",
+      "rationale": "買取業者の実績データで定価の4倍超で取引される例が確認されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。",
+      "marketPrices": [
+        {
+          "site": "買取相場(業者公表値)",
+          "price": 100000
+        },
+        {
+          "site": "メルカリ",
+          "price": null
+        },
+        {
+          "site": "ヤフオク",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "髙島屋(タカシマヤアプリ)",
+          "eligibility": "タカシマヤアプリ会員限定エントリー",
+          "periodLabel": "不定期(年1〜2回程度)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "対象14店舗のいずれかで店頭受取",
+          "officialUrl": "https://www.takashimaya.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "honda-mugen-rr",
+      "name": "シビック タイプR Mugen RR",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 4770000,
+      "currentPriceRepresentative": 20000000,
+      "confidence": "confirmed",
+      "rationale": "新車価格477万円に対し、中古市場で約2,000万円(約4倍)で取引された実例が自動車メディアで報告されている。台数が極めて限られる特別仕様車。",
+      "marketPrices": [
+        {
+          "site": "中古車市場(実例)",
+          "price": 20000000
+        },
+        {
+          "site": "その他",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "Honda/無限 正規ディーラー",
+          "eligibility": "台数限定・先着/抽選(詳細は販売時に個別案内、未確認)",
+          "periodLabel": "不定期(特別仕様車発売時のみ)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://www.honda.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "ichibankuji-lastone",
+      "name": "一番くじ ラストワン賞フィギュア(代表例)",
+      "genre": "フィギュア/くじ",
+      "definitivePrice": 5000,
+      "currentPriceRepresentative": 15000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 一番くじは1回800円程度の抽選だが、ラストワン賞など目玉フィギュアは実質的な想定小売価格を基準に転売相場が形成される。人気シリーズでは発売直後に2〜5倍程度まで高騰し、数ヶ月で沈静化する傾向がある(具体的な商品・時期により大きく変動)。",
+      "marketPrices": [
+        {
+          "site": "メルカリ(目安)",
+          "price": 15000
+        },
+        {
+          "site": "ヤフオク(目安)",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "一番くじONLINE(BANDAI SPIRITS)",
+          "eligibility": "会員登録、抽選ではなく先着(順番待ち)方式、商品ごとに購入上限あり",
+          "periodLabel": "毎週〜月数回、常時複数シリーズ展開",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "決済後、自宅発送",
+          "officialUrl": "https://1kuji.com/"
+        }
+      ]
+    },
+    {
+      "id": "rolex-daytona",
+      "name": "ロレックス デイトナ(新型ステンレス)",
+      "genre": "高級腕時計",
+      "definitivePrice": 1700000,
+      "currentPriceRepresentative": 4250000,
+      "confidence": "confirmed",
+      "rationale": "定価の2〜5倍超で取引されるのが業界内で広く知られた相場。正規店での入手困難度が非常に高く、恒常的にプレミアが付く代表モデル。",
+      "marketPrices": [
+        {
+          "site": "中古時計店(目安)",
+          "price": 4250000
+        },
+        {
+          "site": "ヤフオク",
+          "price": null
+        },
+        {
+          "site": "eBay",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "ロレックス正規店(全国)",
+          "eligibility": "来店予約制。抽選/先着は店舗により異なる。1人1本限り、購入後6ヶ月は他店でも追加購入不可(2024年末以降のルール)",
+          "periodLabel": "随時(モデルにより入荷時期が偏る)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "正規店での店頭引き渡し",
+          "officialUrl": "https://www.rolex.com/ja/rolex-dealers/"
+        }
+      ]
+    },
+    {
+      "id": "mita-sneakers-nb",
+      "name": "mita sneakers別注 New Balance(代表例)",
+      "genre": "スニーカー",
+      "definitivePrice": 16500,
+      "currentPriceRepresentative": 35000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: mita sneakers別注モデルは人気コラボで定価の2倍前後まで高騰する傾向があるとされるが、モデルごとの変動が大きく明確な統計データは確認できていない。",
+      "marketPrices": [
+        {
+          "site": "メルカリ(目安)",
+          "price": 35000
+        },
+        {
+          "site": "スニーカーダンク",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "mita sneakers",
+          "eligibility": "デジタル抽選と店頭抽選は重複応募不可。国内居住者限定。転売目的が発覚した場合は当選取消の明記あり",
+          "periodLabel": "不定期(コラボ発売のたび)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後、店頭受取または発送(商品による)",
+          "officialUrl": "https://draw.mita-sneakers.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "nike-snkrs-jordan",
+      "name": "Nike SNKRS Air Jordan限定モデル(代表例)",
+      "genre": "スニーカー",
+      "definitivePrice": 29700,
+      "currentPriceRepresentative": 60000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、近年は転売市場全体の冷却で倍率が縮小傾向にあると報告されている。人気モデルは今も高倍率を維持する場合がある。",
+      "marketPrices": [
+        {
+          "site": "スニーカーダンク(目安)",
+          "price": 60000
+        },
+        {
+          "site": "StockX",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "Nike SNKRSアプリ",
+          "eligibility": "SNKRS/Nikeアプリ会員登録必須",
+          "periodLabel": "高頻度(新作発売のたび)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後アプリ内決済 → 発送",
+          "officialUrl": "https://www.nike.com/jp/"
+        }
+      ]
+    },
+    {
+      "id": "suntory-sotd",
+      "name": "山崎/白州 Story of the Distillery",
+      "genre": "ウイスキー",
+      "definitivePrice": 17600,
+      "currentPriceRepresentative": 35000,
+      "confidence": "confirmed",
+      "rationale": "定価17,600円に対し、市場では概ね2倍前後で取引されるのが定着した相場。サントリー公式・量販店・酒販店の複数チャネルで抽選が行われるため供給はやや多いが、依然として当選自体が困難。",
+      "marketPrices": [
+        {
+          "site": "メルカリ(目安)",
+          "price": 35000
+        },
+        {
+          "site": "ヤフオク(目安)",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "サントリー公式サイト",
+          "eligibility": "公式サイト会員登録、1人1回/回",
+          "periodLabel": "年数回(2026年は4回以上確認)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://www.suntory.co.jp/whisky/"
+        },
+        {
+          "name": "ウエルシア(majicaアプリ)",
+          "eligibility": "majicaアプリ会員限定、20歳以上、LINE公式アカウント登録",
+          "periodLabel": "不定期(2026年は7月実施を確認)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "店頭受取",
+          "officialUrl": "https://www.majica-net.com/"
+        },
+        {
+          "name": "やまや(やまやカード)",
+          "eligibility": "やまやカード会員(年会費無料)、本人名義クレジットカード決済のみ、1人1回のみ",
+          "periodLabel": "不定期〜月1回程度",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "店頭受取",
+          "officialUrl": "https://rfl.yamaya.jp/"
+        }
+      ]
+    },
+    {
+      "id": "suzuki-jimny-nomade",
+      "name": "ジムニー ノマド",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 2700000,
+      "currentPriceRepresentative": 4500000,
+      "confidence": "confirmed",
+      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年4月時点で中古在庫が1,000台超に増え沈静化傾向にあると報じられている。倍率は時期により大きく変動する点に注意。",
+      "marketPrices": [
+        {
+          "site": "中古車市場(発売直後の実例)",
+          "price": 4500000
+        },
+        {
+          "site": "中古車市場(2026年4月時点)",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "スズキ正規ディーラー",
+          "eligibility": "ディーラー店頭のみでエントリー(電話・メール不可)、運転免許証提示、1人1回・キャンセル不可",
+          "periodLabel": "2026年は1/30〜2/28に受注再開(次回未定)",
+          "periodStart": "2026-01-30",
+          "periodEndDate": "2026-02-28",
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://www.suzuki.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch2",
+      "name": "Nintendo Switch 2 本体",
+      "genre": "ゲーム機",
+      "definitivePrice": 49980,
+      "currentPriceRepresentative": 80000,
+      "confidence": "confirmed",
+      "rationale": "定価49,980円に対し転売相場は約7万〜10万円(定価の約1.4〜2倍)で推移していると報じられている。発売から時間が経っても継続的に抽選が行われ、需要が根強い。",
+      "marketPrices": [
+        {
+          "site": "メルカリ(目安)",
+          "price": 80000
+        },
+        {
+          "site": "ヤフオク(目安)",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "マイニンテンドーストア",
+          "eligibility": "ニンテンドーアカウント必須、Switch Online累積1年以上加入、Switch1プレイ時間50h以上等(回により変動)",
+          "periodLabel": "不定期(2025年は月1回程度のペース)",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://store-jp.nintendo.com/"
+        },
+        {
+          "name": "ヨドバシ.com",
+          "eligibility": "会員登録必須、直近1年で累計5万円以上の購入履歴、ゴールドポイントカード・プラス決済で当選優遇",
+          "periodLabel": "随時",
+          "periodStart": null,
+          "periodEndDate": null,
+          "receiveMethod": "当選後決済 → 発送",
+          "officialUrl": "https://www.yodobashi.com/"
+        }
+      ]
+    },
+    {
+      "id": "toyota-grmn-yaris",
+      "name": "GRMNヤリス",
+      "genre": "自動車限定モデル",
+      "definitivePrice": 7317000,
+      "currentPriceRepresentative": 10500000,
+      "confidence": "confirmed",
+      "rationale": "500台限定・新車731.7万円〜に対し、中古市場で1,000万円超で取引される例が確認されている。トヨタGRの限定車は応募自体がGRアプリ限定で狭き門。",
+      "marketPrices": [
+        {
+          "site": "中古車市場(実例)",
+          "price": 10500000
+        },
+        {
+          "site": "その他",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "トヨタGR公式(GRアプリ)",
+          "eligibility": "GRアプリでの抽選応募のみ",
+          "periodLabel": "2026年は5/27〜6/9受付、7/1抽選結果(例年ベース)",
+          "periodStart": "2026-05-27",
+          "periodEndDate": "2026-06-09",
+          "receiveMethod": "正規ディーラーでの納車",
+          "officialUrl": "https://gr.toyota.co.jp/"
+        }
+      ]
+    }
+  ]
+}
