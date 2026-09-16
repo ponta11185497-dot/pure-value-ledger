@@ -520,8 +520,8 @@
 
   const STORAGE_KEY = "purevalue_user_data_v1";
   const MARKET_CACHE_KEY = "purevalue_market_cache_v1";
-  // 週次自動更新で書き換わるリモートのdata.json。リポジトリ作成後にURLを設定する。空文字の間はローカル埋め込みデータのみを使う。
-  const REMOTE_DATA_URL = "";
+  // 週次自動更新で書き換わるリモートのdata.json。
+  const REMOTE_DATA_URL = "https://raw.githubusercontent.com/ponta11185497-dot/pure-value-ledger/main/data.json";
   const STATUS_OPTIONS = ["未応募","応募済み","当選","落選"];
 
   function todayISO(){
