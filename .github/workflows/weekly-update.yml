@@ -102,9 +102,14 @@ jobs:
 
       - name: Configure git and push
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # claude-code-action がgitの認証情報を独自トークンに書き換えているため、
+          # push前に標準のGITHUB_TOKENへ明示的に戻す。
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           if [ -n "$(git status --porcelain data.json)" ]; then
             git add data.json
             git commit -m "Weekly data update $(date -u +%Y-%m-%d)"
