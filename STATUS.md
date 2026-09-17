@@ -7,22 +7,31 @@
 - デザイン: 白背景・ゴシック体・青アクセント(メルカリ/ヤフオク風)
 - 機能: マイ応募/ランキング(倍率順)/終了した応募(自動移動)/情報源管理、すべて動作確認済み
 - index.htmlは起動時にGitHub上のdata.jsonを自動取得して表示(オフライン時は前回キャッシュ→初期データにフォールバック)
+- **週次自動更新(GitHub Actions)が完全に動作するようになった**
+  - `.github/workflows/weekly-update.yml` をpush済み、毎週月曜9:00(JST)に自動実行
+  - GitHub Secrets `CLAUDE_CODE_OAUTH_TOKEN` 登録済み(OAuth方式、Pro/Maxプラン内で追加課金なし)
+  - GitHub App「Claude」もリポジトリにインストール・承認済み
+  - 手動テスト実行(`gh workflow run weekly-update.yml`)で実際にdata.jsonが更新され、
+    pushされることを確認済み(2026-09-17時点、12件のアイテムで動作確認)
 
-## 未完了(保留中)
-- **週次自動更新(GitHub Actions)が未設定**
-  - `.github/workflows/weekly-update.yml` はローカルに準備済みだが、まだリポジトリに
-    push できていない(`.github/`, `STATUS.md`, `起動.bat` がuntrackedのまま)
-  - GitHub Secrets(`CLAUDE_CODE_OAUTH_TOKEN`)は未登録(`gh secret list`で0件確認済み)
-  - 課金を避けたいとの方針のため、API キー方式(`ANTHROPIC_API_KEY`)ではなく
-    OAuth方式(`claude setup-token`、Pro/Maxプラン内で追加課金なし)で進める方針に決定
-  - **原因を特定:** Claude Codeセッション経由のコマンド実行(Bashツール実行、および
-    チャット欄からの`!`プレフィックス実行の両方)は本物のTTYではないため、
-    `claude setup-token` のインタラクティブUI(ブラウザ認証完了の検知)が機能しない。
-    ブラウザ側の認証自体は毎回成功するが、コマンド側の出力が0バイトのまま固まる。
-  - **次回の進め方:** Claude Codeを介さず、Windowsのターミナル/PowerShellを
-    ユーザーが直接(Claude Code外で)開いて `claude setup-token` を実行してもらう。
-    発行されたトークンをチャットに貼ってもらい、`gh secret set CLAUDE_CODE_OAUTH_TOKEN`
-    で登録する。
+## 解決した問題(今後同種の設定をする際の参考)
+1. `claude setup-token` はClaude Codeセッション経由(Bashツール、`!`プレフィックス実行とも)
+   では動かない。本物のTTYが必要なので、ユーザーがClaude Codeを介さず直接開いた
+   PowerShell/ターミナルで実行してもらう必要がある。
+2. ワークフローには `permissions: id-token: write` が必要(OIDCトークン取得のため)。
+3. リポジトリに GitHub App「Claude」(https://github.com/apps/claude)をインストールしないと
+   `claude-code-action` は動かない(「Claude Code is not installed on this repository」エラー)。
+4. プロンプトでサブエージェント/バックグラウンドタスク(Agent, ScheduleWakeupツール)を
+   使わせると、「完了通知待ち」のまま実行が終わってしまい、結果が反映されない
+   (CI実行には続きのターンが存在しないため)。`--disallowedTools Agent,ScheduleWakeup`
+   で禁止し、プロンプトでも同期実行を明示する必要がある。
+5. 同期実行に切り替えると必要ターン数が増えるため `--max-turns` に余裕を持たせる
+   (30では不足、60に設定)。
+6. `claude-code-action` が実行中にgitの認証情報を独自トークンへ書き換えるため、
+   後続のpushステップで `git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@...`
+   のように標準トークンへ明示的に戻す必要がある。
+7. 前段のstepが失敗扱いになると後続stepがスキップされるため、pushステップには
+   `if: always()` を付けておくと安全。
 
 ## 次にこのフォルダで作業を頼むときの言い方(例)
-「プレ値フォルダのSTATUS.mdを見て、週次自動更新の設定を続きから進めて」
+「プレ値フォルダのSTATUS.mdを見て、続きから進めて」
