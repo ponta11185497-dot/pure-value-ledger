@@ -40,20 +40,20 @@
       "name": "イチローズモルト 干支ラベル",
       "genre": "ウイスキー",
       "definitivePrice": 23100,
-      "currentPriceRepresentative": 100000,
+      "currentPriceRepresentative": 112900,
       "confidence": "confirmed",
-      "rationale": "買取業者の実績データで定価の4倍超で取引される例が確認されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。",
+      "rationale": "ヤフオク落札実績(2026年時点)で最安74,800円〜最高166,100円、平均112,916円と定価の3〜7倍で取引されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。",
       "marketPrices": [
         {
           "site": "買取相場(業者公表値)",
           "price": 100000
         },
         {
-          "site": "メルカリ",
-          "price": null
+          "site": "ヤフオク(落札平均)",
+          "price": 112900
         },
         {
-          "site": "ヤフオク",
+          "site": "メルカリ",
           "price": null
         }
       ],
@@ -76,15 +76,15 @@
       "definitivePrice": 4770000,
       "currentPriceRepresentative": 20000000,
       "confidence": "confirmed",
-      "rationale": "新車価格477万円に対し、中古市場で約2,000万円(約4倍)で取引された実例が自動車メディアで報告されている。台数が極めて限られる特別仕様車。",
+      "rationale": "新車価格477万円に対し、発売直後から中古市場で1,000万円超、その後約2,000万円(定価の約4倍)で取引された実例が自動車メディアで報告されている。台数が極めて限られる特別仕様車。",
       "marketPrices": [
         {
           "site": "中古車市場(実例)",
           "price": 20000000
         },
         {
-          "site": "その他",
-          "price": null
+          "site": "自動車メディア報道(発売直後の実例)",
+          "price": 10000000
         }
       ],
       "stores": [
@@ -133,14 +133,14 @@
       "id": "rolex-daytona",
       "name": "ロレックス デイトナ(新型ステンレス)",
       "genre": "高級腕時計",
-      "definitivePrice": 1700000,
-      "currentPriceRepresentative": 4250000,
+      "definitivePrice": 2499200,
+      "currentPriceRepresentative": 5000000,
       "confidence": "confirmed",
-      "rationale": "定価の2〜5倍超で取引されるのが業界内で広く知られた相場。正規店での入手困難度が非常に高く、恒常的にプレミアが付く代表モデル。",
+      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は500万円前後で高止まりしており、定価の2倍前後で取引されるのが業界内で広く知られた相場。正規店での入手困難度が非常に高く、恒常的にプレミアが付く代表モデル。",
       "marketPrices": [
         {
           "site": "中古時計店(目安)",
-          "price": 4250000
+          "price": 5000000
         },
         {
           "site": "ヤフオク",
@@ -200,7 +200,7 @@
       "definitivePrice": 29700,
       "currentPriceRepresentative": 60000,
       "confidence": "estimated",
-      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、近年は転売市場全体の冷却で倍率が縮小傾向にあると報告されている。人気モデルは今も高倍率を維持する場合がある。",
+      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、2026年に入り転売市場全体の冷却で倍率が縮小傾向にあると報告されている(2026年9月はAJ4 Tour Yellow、AJ12 Bucks、AJ9 Space Jam等が発売)。人気モデルは今も高倍率を維持する場合がある。",
       "marketPrices": [
         {
           "site": "スニーカーダンク(目安)",
@@ -245,9 +245,9 @@
         {
           "name": "サントリー公式サイト",
           "eligibility": "公式サイト会員登録、1人1回/回",
-          "periodLabel": "年数回(2026年は4回以上確認)",
-          "periodStart": null,
-          "periodEndDate": null,
+          "periodLabel": "年数回(2026年は4回以上実施、直近は7/30〜9/2に第1・2弾を実施、10/6発売予定)",
+          "periodStart": "2026-07-30",
+          "periodEndDate": "2026-09-02",
           "receiveMethod": "当選後決済 → 自宅発送",
           "officialUrl": "https://www.suntory.co.jp/whisky/"
         },
@@ -276,24 +276,24 @@
       "name": "ジムニー ノマド",
       "genre": "自動車限定モデル",
       "definitivePrice": 2700000,
-      "currentPriceRepresentative": 4500000,
+      "currentPriceRepresentative": 3300000,
       "confidence": "confirmed",
-      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年4月時点で中古在庫が1,000台超に増え沈静化傾向にあると報じられている。倍率は時期により大きく変動する点に注意。",
+      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年8月時点のグーネット掲載相場は208万〜616万円で300万円前後が中心となり沈静化が進んでいる。倍率は時期により大きく変動する点に注意。",
       "marketPrices": [
         {
           "site": "中古車市場(発売直後の実例)",
           "price": 4500000
         },
         {
-          "site": "中古車市場(2026年4月時点)",
-          "price": null
+          "site": "中古車市場(2026年8月時点)",
+          "price": 3300000
         }
       ],
       "stores": [
         {
           "name": "スズキ正規ディーラー",
           "eligibility": "ディーラー店頭のみでエントリー(電話・メール不可)、運転免許証提示、1人1回・キャンセル不可",
-          "periodLabel": "2026年は1/30〜2/28に受注再開(次回未定)",
+          "periodLabel": "2026年1/30〜2/28に抽選受付(終了)、3月以降は通常受注生産に移行(次回抽選は未定)",
           "periodStart": "2026-01-30",
           "periodEndDate": "2026-02-28",
           "receiveMethod": "正規ディーラーでの納車",
@@ -305,18 +305,18 @@
       "id": "nintendo-switch2",
       "name": "Nintendo Switch 2 本体",
       "genre": "ゲーム機",
-      "definitivePrice": 49980,
-      "currentPriceRepresentative": 80000,
+      "definitivePrice": 59980,
+      "currentPriceRepresentative": 40000,
       "confidence": "confirmed",
-      "rationale": "定価49,980円に対し転売相場は約7万〜10万円(定価の約1.4〜2倍)で推移していると報じられている。発売から時間が経っても継続的に抽選が行われ、需要が根強い。",
+      "rationale": "発売直後は定価49,980円に対し転売相場7万〜10万円まで高騰したが、2026年5月25日に定価が59,980円へ改定された後は供給も安定し、メルカリ相場は3.5万〜4.5万円、買取価格も3.4万〜4万円程度まで沈静化。現在はプレミアムがほぼ消滅し定価割れの状態。",
       "marketPrices": [
         {
-          "site": "メルカリ(目安)",
-          "price": 80000
+          "site": "メルカリ(目安、2026年9月)",
+          "price": 40000
         },
         {
-          "site": "ヤフオク(目安)",
-          "price": null
+          "site": "メルカリ(発売直後の実例)",
+          "price": 80000
         }
       ],
       "stores": [
@@ -347,7 +347,7 @@
       "definitivePrice": 7317000,
       "currentPriceRepresentative": 10500000,
       "confidence": "confirmed",
-      "rationale": "500台限定・新車731.7万円〜に対し、中古市場で1,000万円超で取引される例が確認されている。トヨタGRの限定車は応募自体がGRアプリ限定で狭き門。",
+      "rationale": "500台限定・新車731.7万〜846.7万円に対し、中古市場では680万〜1,445万円程度のレンジで取引され、実例として1,000万円超のケースも確認されている。トヨタGRの限定車は応募自体がGRアプリ限定で狭き門(本モデルの抽選受付は2021年に終了済み、次回応募は未定)。",
       "marketPrices": [
         {
           "site": "中古車市場(実例)",
@@ -362,11 +362,54 @@
         {
           "name": "トヨタGR公式(GRアプリ)",
           "eligibility": "GRアプリでの抽選応募のみ",
-          "periodLabel": "2026年は5/27〜6/9受付、7/1抽選結果(例年ベース)",
-          "periodStart": "2026-05-27",
-          "periodEndDate": "2026-06-09",
+          "periodLabel": "抽選受付終了(2021/1/14〜2/28実施、2022年8月発売済み)。次回応募の予定なし",
+          "periodStart": "2021-01-14",
+          "periodEndDate": "2021-02-28",
           "receiveMethod": "正規ディーラーでの納車",
           "officialUrl": "https://gr.toyota.co.jp/"
+        }
+      ]
+    },
+    {
+      "id": "pokemon-30th-celebration-futuristic-box",
+      "name": "ポケモンカードゲーム MEGA拡張パック「30th CELEBRATION」FUTURISTIC BOX",
+      "genre": "トレーディングカード",
+      "definitivePrice": 27500,
+      "currentPriceRepresentative": 44000,
+      "confidence": "confirmed",
+      "rationale": "2026年9月16日発売のポケモン30周年記念BOX。発売直後からメルカリ・スニーカーダンクで定価の1.5〜1.6倍にあたる4.2万〜4.5万円で複数の成約が確認されている。30周年の話題性で抽選応募が殺到し入手困難。",
+      "marketPrices": [
+        {
+          "site": "メルカリ",
+          "price": 42248
+        },
+        {
+          "site": "スニーカーダンク",
+          "price": 44970
+        },
+        {
+          "site": "駿河屋(買取目安)",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "ポケモンセンターオンライン",
+          "eligibility": "プレイヤーズクラブ会員登録(本人認証済み枠/本人未認証枠の2枠で抽選)",
+          "periodLabel": "抽選済み(2026/9/11〜9/16実施)。次回は9/30に別商品の発表予定あり",
+          "periodStart": "2026-09-11",
+          "periodEndDate": "2026-09-16",
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://www.pokemoncenter-online.com/"
+        },
+        {
+          "name": "駿河屋",
+          "eligibility": "駿河屋通販サイト、X(Twitter)アカウントでの応募",
+          "periodLabel": "抽選済み(〜2026/9/6受付)",
+          "periodStart": null,
+          "periodEndDate": "2026-09-06",
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://www.suruga-ya.jp/"
         }
       ]
     }
