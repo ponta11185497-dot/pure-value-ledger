@@ -44,7 +44,7 @@
       "definitivePrice": 23100,
       "currentPriceRepresentative": 112900,
       "confidence": "confirmed",
-      "rationale": "ヤフオク落札実績(2026年時点)で最安74,800円〜最高166,100円、平均112,916円と定価の3〜7倍で取引されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。",
+      "rationale": "ヤフオク落札実績(2026年時点)で最安74,800円〜最高166,100円、平均112,916円と定価の3〜7倍で取引されている。イチローズモルトのカード/干支シリーズは特に希少性が高く高騰しやすい。2026年午年ラベルはタカシマヤアプリで2026/1/5〜1/12に抽選受付済み(既に終了)。",
       "marketPrices": [
         {
           "site": "買取相場(業者公表値)",
@@ -62,10 +62,10 @@
       "stores": [
         {
           "name": "髙島屋(タカシマヤアプリ)",
-          "eligibility": "タカシマヤアプリ会員限定エントリー",
-          "periodLabel": "不定期(年1〜2回程度)",
-          "periodStart": null,
-          "periodEndDate": null,
+          "eligibility": "タカシマヤアプリ会員限定エントリー、お一人様1回、20歳未満は応募不可",
+          "periodLabel": "年1回程度(2026年は1/5〜1/12に受付済み、既に終了)",
+          "periodStart": "2026-01-05",
+          "periodEndDate": "2026-01-12",
           "receiveMethod": "対象14店舗のいずれかで店頭受取",
           "officialUrl": "https://www.takashimaya.co.jp/"
         }
@@ -110,7 +110,7 @@
       "definitivePrice": 5000,
       "currentPriceRepresentative": 15000,
       "confidence": "estimated",
-      "rationale": "推測・要注意: 一番くじは1回800円程度の抽選だが、ラストワン賞など目玉フィギュアは実質的な想定小売価格を基準に転売相場が形成される。人気シリーズでは発売直後に2〜5倍程度まで高騰し、数ヶ月で沈静化する傾向がある(具体的な商品・時期により大きく変動)。",
+      "rationale": "推測・要注意: 一番くじは1回800円程度の抽選だが、ラストワン賞など目玉フィギュアは実質的な想定小売価格を基準に転売相場が形成される。オークファン集計では直近30日のラストワン賞落札2,784件の平均落札価格は6,979円(人気の低いシリーズも含む全体平均)。人気シリーズでは発売直後に2〜5倍程度まで高騰し、発売3ヶ月後には沈静化する傾向がある(具体的な商品・時期により大きく変動)。",
       "marketPrices": [
         {
           "site": "メルカリ(目安)",
@@ -139,13 +139,13 @@
       "genre": "高級腕時計",
       "category": "その他",
       "definitivePrice": 2499200,
-      "currentPriceRepresentative": 5000000,
+      "currentPriceRepresentative": 6000000,
       "confidence": "confirmed",
-      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は500万円前後で高止まりしており、定価の2倍前後で取引されるのが業界内で広く知られた相場。正規店での入手困難度が非常に高く、恒常的にプレミアが付く代表モデル。",
+      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は高止まりしており、2026年9月時点で126500LN白文字盤の中古相場は600万円前後(定価の約2.4倍)。デイトナ全体の平均相場も約752万円(前年比+16.2%)まで上昇しており、正規店での入手困難度が非常に高い恒常的なプレミアムモデル。",
       "marketPrices": [
         {
-          "site": "中古時計店(目安)",
-          "price": 5000000
+          "site": "中古時計店(126500LN白文字盤、2026年9月目安)",
+          "price": 6000000
         },
         {
           "site": "ヤフオク",
@@ -207,7 +207,7 @@
       "definitivePrice": 29700,
       "currentPriceRepresentative": 60000,
       "confidence": "estimated",
-      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、2026年に入り転売市場全体の冷却で倍率が縮小傾向にあると報告されている(2026年9月はAJ4 Tour Yellow、AJ12 Bucks、AJ9 Space Jam等が発売)。人気モデルは今も高倍率を維持する場合がある。",
+      "rationale": "推測・要注意: 以前は定価の2〜3倍が一般的だったが、2026年に入り転売市場全体の冷却で倍率が縮小傾向にあると報告されている。2026年9月はAJ4 Tour Yellow(9/5)、AJ9 Space Jam(9/19)、AJ1 Low OG Last Dance at The Garden(9/26)等が発売されており、人気モデルは今も高倍率を維持する場合がある。",
       "marketPrices": [
         {
           "site": "スニーカーダンク(目安)",
@@ -285,17 +285,17 @@
       "genre": "自動車限定モデル",
       "category": "その他",
       "definitivePrice": 2700000,
-      "currentPriceRepresentative": 3300000,
+      "currentPriceRepresentative": 3000000,
       "confidence": "confirmed",
-      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年8月時点のグーネット掲載相場は208万〜616万円で300万円前後が中心となり沈静化が進んでいる。倍率は時期により大きく変動する点に注意。",
+      "rationale": "発売直後は定価265万〜275万円に対し400万〜500万円台まで高騰したが、2026年1月末の受注再開以降は供給が安定し沈静化が進行。2026年9月時点の買取相場は232.5万〜361万円のレンジで、300万円前後が中心。倍率は時期により大きく変動する点に注意。",
       "marketPrices": [
         {
           "site": "中古車市場(発売直後の実例)",
           "price": 4500000
         },
         {
-          "site": "中古車市場(2026年8月時点)",
-          "price": 3300000
+          "site": "買取相場(2026年9月時点、目安)",
+          "price": 3000000
         }
       ],
       "stores": [
@@ -389,7 +389,7 @@
       "definitivePrice": 27500,
       "currentPriceRepresentative": 44000,
       "confidence": "confirmed",
-      "rationale": "2026年9月16日発売のポケモン30周年記念BOX。発売直後からメルカリ・スニーカーダンクで定価の1.5〜1.6倍にあたる4.2万〜4.5万円で複数の成約が確認されている。30周年の話題性で抽選応募が殺到し入手困難。",
+      "rationale": "2026年9月16日発売のポケモン30周年記念BOX。発売直後からメルカリ・スニーカーダンクで定価の1.5〜1.6倍にあたる4.2万〜4.5万円で複数の成約が確認されている。買取店27社集計の平均買取価格は38,846円(2026/9/17時点)で、大手5社は4万〜4.9万円のレンジ。30周年の話題性で抽選応募が殺到し入手困難。",
       "marketPrices": [
         {
           "site": "メルカリ",
@@ -400,8 +400,8 @@
           "price": 44970
         },
         {
-          "site": "駿河屋(買取目安)",
-          "price": null
+          "site": "買取店27社平均",
+          "price": 38846
         }
       ],
       "stores": [
@@ -422,6 +422,76 @@
           "periodEndDate": "2026-09-06",
           "receiveMethod": "当選後決済 → 自宅発送",
           "officialUrl": "https://www.suruga-ya.jp/"
+        }
+      ]
+    },
+    {
+      "id": "hibiki-blossom-harmony-2026",
+      "name": "響 ブロッサムハーモニー 2026",
+      "genre": "ウイスキー",
+      "category": "ウィスキー",
+      "definitivePrice": 14300,
+      "currentPriceRepresentative": 30000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 2026年5月26日発売の桜樽後熟原酒ブレンド限定品。サントリー公式のメルマガで「BLOSSOM HARMONYシリーズ最後を飾る」と案内され終売観測が広がり品薄感が強い。過去のヤフオク実績では2024年版が27,980円〜、2022年版は129,500円まで高騰した例があるが、2026年版自体の具体的な落札実例はまだ十分に確認できていない。",
+      "marketPrices": [
+        {
+          "site": "ヤフオク(2024年版実績、参考)",
+          "price": 27980
+        },
+        {
+          "site": "ヤフオク(2022年版実績、参考)",
+          "price": 129500
+        },
+        {
+          "site": "メルカリ",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "サントリー公式サイト",
+          "eligibility": "公式サイト会員登録、数量限定抽選",
+          "periodLabel": "抽選済み(2026/5/26発売)",
+          "periodStart": null,
+          "periodEndDate": "2026-05-26",
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://www.suntory.co.jp/whisky/hibiki/"
+        }
+      ]
+    },
+    {
+      "id": "onepiece-4th-anniversary-set",
+      "name": "ONE PIECEカードゲーム 4th Anniversary Set",
+      "genre": "トレーディングカード",
+      "category": "トレカ",
+      "definitivePrice": 18700,
+      "currentPriceRepresentative": 35000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 4周年記念のプロモカード9枚(ルフィ、シャンクス等)とスリーブ・プレイマット等が同梱されたセット。抽選受付は2026/8/3〜9/2で既に終了、発送は2027年2月予定のため現時点で二次流通の実例は未確認。前例の「3rd ANNIVERSARY SET」は買取価格が最大約5万円まで上昇した実績があり、同程度のプレミアが付く可能性が高いが、あくまで前例からの推測値。",
+      "marketPrices": [
+        {
+          "site": "3rd Anniversary Set買取実績(参考)",
+          "price": 50000
+        },
+        {
+          "site": "メルカリ",
+          "price": null
+        },
+        {
+          "site": "スニーカーダンク",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "プレミアムバンダイ",
+          "eligibility": "バンダイナムコID会員登録、抽選(2026/8/3 11:00〜9/2 23:00受付済み)",
+          "periodLabel": "抽選済み(2026/8/3〜9/2)。発送は2027年2月頃予定",
+          "periodStart": "2026-08-03",
+          "periodEndDate": "2026-09-02",
+          "receiveMethod": "当選後決済 → 2027年2月頃発送予定",
+          "officialUrl": "https://p-bandai.jp/item/item-1000255670/"
         }
       ]
     }
