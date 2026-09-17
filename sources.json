@@ -1,11 +1,163 @@
 [
-  {"type": "url", "value": "https://www.pokemoncenter-online.com/", "note": "ポケモンセンターオンライン"},
-  {"type": "url", "value": "https://p-bandai.jp/", "note": "プレミアムバンダイ"},
-  {"type": "url", "value": "https://www.suntory.co.jp/whisky/", "note": "サントリー ウイスキー"},
-  {"type": "url", "value": "https://www.rolex.com/ja/rolex-dealers/", "note": "ロレックス正規店一覧"},
-  {"type": "url", "value": "https://store-jp.nintendo.com/", "note": "マイニンテンドーストア"},
-  {"type": "url", "value": "https://www.nike.com/jp/", "note": "Nike SNKRS"},
-  {"type": "url", "value": "https://1kuji.com/", "note": "一番くじONLINE"},
-  {"type": "x", "value": "@surugaya_toreka", "note": "駿河屋トレカ公式"},
-  {"type": "x", "value": "@Yodobashi_X", "note": "ヨドバシ公式"}
+  {
+    "id": "seed-1",
+    "type": "url",
+    "value": "https://www.pokemoncenter-online.com/",
+    "note": "ポケモンセンターオンライン",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-2",
+    "type": "url",
+    "value": "https://p-bandai.jp/",
+    "note": "プレミアムバンダイ",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-3",
+    "type": "url",
+    "value": "https://www.suntory.co.jp/whisky/",
+    "note": "サントリー ウイスキー",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-4",
+    "type": "url",
+    "value": "https://www.rolex.com/ja/rolex-dealers/",
+    "note": "ロレックス正規店一覧",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-5",
+    "type": "url",
+    "value": "https://store-jp.nintendo.com/",
+    "note": "マイニンテンドーストア",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-6",
+    "type": "url",
+    "value": "https://www.nike.com/jp/",
+    "note": "Nike SNKRS",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-7",
+    "type": "url",
+    "value": "https://1kuji.com/",
+    "note": "一番くじONLINE",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-8",
+    "type": "x",
+    "value": "@surugaya_toreka",
+    "note": "駿河屋トレカ公式",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "seed-9",
+    "type": "x",
+    "value": "@Yodobashi_X",
+    "note": "ヨドバシ公式",
+    "addedAt": "2026-09-17"
+  },
+  {
+    "id": "s-1789677187858-96obs",
+    "type": "url",
+    "value": "https://snkrdunk.com/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677220062-a60hv",
+    "type": "url",
+    "value": "https://snkrdunk.com/articles/14618/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677230098-8dh8k",
+    "type": "url",
+    "value": "https://orenoraresne.com/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677251722-7a2yd",
+    "type": "url",
+    "value": "https://sneaker-jungle.com/%E3%81%AB%E3%82%85%E3%83%BC%E3%81%9A%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%8A%BD%E9%81%B8%E7%A2%BA%E7%8E%87%E3%81%A8%E3%83%97%E3%83%AC%E5%80%A4%E3%81%AE%E9%96%A2%E4%BF%82%EF%BC%81/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677267738-fibq3",
+    "type": "url",
+    "value": "https://cardchusen.com/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677284106-p81wz",
+    "type": "url",
+    "value": "https://altema.jp/pokemoncard/koutou",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677300218-4huf6",
+    "type": "url",
+    "value": "https://furima-souba.com/articles/ichiban-kuji-last-one-mercari/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677315270-u9m1b",
+    "type": "url",
+    "value": "https://premium.gamepedia.jp/hobby/archives/category/%E6%8A%BD%E9%81%B8%E8%B2%A9%E5%A3%B2",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677327074-pxpi6",
+    "type": "url",
+    "value": "https://laurier-hub.com/lottery/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677337666-uiz37",
+    "type": "url",
+    "value": "https://nyuka-now.com/archives/category/chusen",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677348238-vtyr9",
+    "type": "url",
+    "value": "https://tenbaiquest.com/",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677364310-1p9oz",
+    "type": "url",
+    "value": "https://x.com/M_matching_News/status/2056274606378598812",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677381570-7c7o0",
+    "type": "url",
+    "value": "https://x.com/oricon_anime_/status/1966323137718661320",
+    "note": "",
+    "addedAt": "2026-09-18"
+  },
+  {
+    "id": "s-1789677394798-9lyqs",
+    "type": "url",
+    "value": "https://twitter.com/hashtag/%E3%83%97%E3%83%AC%E5%80%A4",
+    "note": "",
+    "addedAt": "2026-09-18"
+  }
 ]
