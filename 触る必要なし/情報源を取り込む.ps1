@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = "Stop"
-$root = $PSScriptRoot
+$root = Split-Path $PSScriptRoot -Parent
 Set-Location $root
 
 $dropFile = Join-Path $root "新しい情報源.txt"

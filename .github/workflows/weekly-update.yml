@@ -102,14 +102,14 @@ jobs:
                新規アイテムには必ず category を上記の分類基準に従って設定すること(省略不可)。
             5. 受付期限(periodEndDate)が判明して、かつ全ての store の periodEndDate が過去日付に
                なった場合でも、そのアイテムは data.json 内に残してよい(削除しない)。
-               「終了」判定と表示側への振り分けはアプリ側(index.html)が自動で行うため、
+               「終了」判定と表示側への振り分けはアプリ側(プレ値台帳.html)が自動で行うため、
                data.json 側では終了アイテムを削除・特別扱いする必要はない。
             6. data.json の generatedAt を今日の日付(YYYY-MM-DD, UTC基準)に更新する。
             7. 変更後、data.json が有効なJSONであることを自分で確認する。
                (git操作はあなたの後段のワークフローステップが自動で行うので、あなたはdata.jsonの
                編集のみ行えばよい。commitやpushは行わなくてよい/その権限もない。)
 
-            index.html や sources.json、ワークフローファイル自体は変更しないこと。
+            プレ値台帳.html や sources.json、ワークフローファイル自体は変更しないこと。
             対象は data.json のみです。
 
       - name: Configure git and push
