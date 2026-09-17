@@ -53,6 +53,17 @@
   h2.section-title .count{font-size:.78rem;color:var(--text-faint);font-weight:normal;}
   .empty-note{color:var(--text-faint);font-size:.85rem;padding:16px;background:var(--bg-panel-2);border-radius:6px;}
 
+  /* Category tabs */
+  .category-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .category-tab{
+    background:#fff;border:1px solid var(--line);color:var(--text-dim);
+    border-radius:16px;padding:7px 16px;font-size:.82rem;cursor:pointer;font-weight:600;
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  .category-tab:hover{background:var(--bg-panel-2);}
+  .category-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .cap-note{font-size:.74rem;color:var(--text-faint);margin:-4px 0 12px;}
+
   /* My applications table */
   table.myapps{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--bg-panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
   table.myapps th{
@@ -92,7 +103,8 @@
   .tier-b .rank-multiplier{color:var(--text-dim);font-size:1rem;}
   .rank-info{flex:1;min-width:0;}
   .rank-info .name{font-size:.96rem;color:var(--text);font-weight:600;}
-  .rank-info .genre{font-size:.74rem;color:var(--text-faint);}
+  .rank-info .meta{font-size:.74rem;color:var(--text-faint);display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+  .cat-chip{font-size:.68rem;padding:1px 8px;border-radius:8px;background:var(--accent-soft);color:var(--accent-dark);font-weight:600;}
   .conf-badge{
     font-size:.68rem;padding:3px 9px;border-radius:10px;white-space:nowrap;flex-shrink:0;font-weight:600;
   }
@@ -177,6 +189,8 @@
 
   <section id="ranking-section">
     <h2 class="section-title">ランキング <span class="count" id="ranking-count"></span></h2>
+    <div class="category-tabs" id="category-tabs"></div>
+    <div class="cap-note" id="cap-note"></div>
     <div id="ranking-body"></div>
   </section>
 
@@ -220,6 +234,7 @@
       "id": "pbandai-hy2m-gundam",
       "name": "HY2M RX-78-2 ガンダム",
       "genre": "フィギュア/プラモデル",
+      "category": "おもちゃ",
       "definitivePrice": 78000,
       "currentPriceRepresentative": 400000,
       "confidence": "confirmed",
@@ -245,6 +260,7 @@
       "id": "ichirosmalt-eto-label",
       "name": "イチローズモルト 干支ラベル",
       "genre": "ウイスキー",
+      "category": "ウィスキー",
       "definitivePrice": 23100,
       "currentPriceRepresentative": 100000,
       "confidence": "confirmed",
@@ -270,6 +286,7 @@
       "id": "honda-mugen-rr",
       "name": "シビック タイプR Mugen RR",
       "genre": "自動車限定モデル",
+      "category": "その他",
       "definitivePrice": 4770000,
       "currentPriceRepresentative": 20000000,
       "confidence": "confirmed",
@@ -294,6 +311,7 @@
       "id": "ichibankuji-lastone",
       "name": "一番くじ ラストワン賞フィギュア(代表例)",
       "genre": "フィギュア/くじ",
+      "category": "おもちゃ",
       "definitivePrice": 5000,
       "currentPriceRepresentative": 15000,
       "confidence": "estimated",
@@ -318,6 +336,7 @@
       "id": "rolex-daytona",
       "name": "ロレックス デイトナ(新型ステンレス)",
       "genre": "高級腕時計",
+      "category": "その他",
       "definitivePrice": 1700000,
       "currentPriceRepresentative": 4250000,
       "confidence": "confirmed",
@@ -343,6 +362,7 @@
       "id": "mita-sneakers-nb",
       "name": "mita sneakers別注 New Balance(代表例)",
       "genre": "スニーカー",
+      "category": "スニーカー",
       "definitivePrice": 16500,
       "currentPriceRepresentative": 35000,
       "confidence": "estimated",
@@ -367,6 +387,7 @@
       "id": "nike-snkrs-jordan",
       "name": "Nike SNKRS Air Jordan限定モデル(代表例)",
       "genre": "スニーカー",
+      "category": "スニーカー",
       "definitivePrice": 29700,
       "currentPriceRepresentative": 60000,
       "confidence": "estimated",
@@ -391,6 +412,7 @@
       "id": "suntory-sotd",
       "name": "山崎/白州 Story of the Distillery",
       "genre": "ウイスキー",
+      "category": "ウィスキー",
       "definitivePrice": 17600,
       "currentPriceRepresentative": 35000,
       "confidence": "confirmed",
@@ -433,6 +455,7 @@
       "id": "suzuki-jimny-nomade",
       "name": "ジムニー ノマド",
       "genre": "自動車限定モデル",
+      "category": "その他",
       "definitivePrice": 2700000,
       "currentPriceRepresentative": 4500000,
       "confidence": "confirmed",
@@ -457,6 +480,7 @@
       "id": "nintendo-switch2",
       "name": "Nintendo Switch 2 本体",
       "genre": "ゲーム機",
+      "category": "おもちゃ",
       "definitivePrice": 49980,
       "currentPriceRepresentative": 80000,
       "confidence": "confirmed",
@@ -490,6 +514,7 @@
       "id": "toyota-grmn-yaris",
       "name": "GRMNヤリス",
       "genre": "自動車限定モデル",
+      "category": "その他",
       "definitivePrice": 7317000,
       "currentPriceRepresentative": 10500000,
       "confidence": "confirmed",
@@ -523,6 +548,9 @@
   // 週次自動更新で書き換わるリモートのdata.json。
   const REMOTE_DATA_URL = "https://raw.githubusercontent.com/ponta11185497-dot/pure-value-ledger/main/data.json";
   const STATUS_OPTIONS = ["未応募","応募済み","当選","落選"];
+  const CATEGORIES = ["総合","トレカ","おもちゃ","スニーカー","アパレル","ウィスキー","その他"];
+  const RANKING_TOP_CAP = 30;
+  let selectedCategory = "総合";
 
   function todayISO(){
     const d = new Date();
@@ -722,7 +750,7 @@
         '<div class="rank-multiplier">'+mult.toFixed(2)+"倍</div>" +
         '<div class="rank-info">' +
           '<div class="name">'+escapeHtml(item.name)+"</div>" +
-          '<div class="genre">'+escapeHtml(item.genre)+"</div>" +
+          '<div class="meta"><span class="cat-chip">'+escapeHtml(item.category||"その他")+'</span><span>'+escapeHtml(item.genre)+"</span></div>" +
         "</div>" +
         '<div class="conf-badge '+confClass+'">'+confLabel+"</div>" +
         '<div class="chevron">▶</div>' +
@@ -741,27 +769,56 @@
     "</div>";
   }
 
+  function renderCategoryTabs(){
+    const el = document.getElementById("category-tabs");
+    el.innerHTML = CATEGORIES.map(c=>
+      '<button class="category-tab'+(c===selectedCategory?" active":"")+'" data-category="'+escapeHtml(c)+'">'+escapeHtml(c)+"</button>"
+    ).join("");
+    el.querySelectorAll(".category-tab").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        if(btn.dataset.category === selectedCategory) return;
+        selectedCategory = btn.dataset.category;
+        renderRankingAndEnded();
+      });
+    });
+  }
+
   function renderRankingAndEnded(){
+    renderCategoryTabs();
+
     const active = [];
     const ended = [];
     marketData.items.forEach(item=>{
+      if(selectedCategory !== "総合" && (item.category||"その他") !== selectedCategory) return;
       if(itemHasOpenStore(item)) active.push(item);
       else ended.push(item);
     });
     active.sort((a,b)=> (b.currentPriceRepresentative/b.definitivePrice) - (a.currentPriceRepresentative/a.definitivePrice));
     ended.sort((a,b)=> (b.currentPriceRepresentative/b.definitivePrice) - (a.currentPriceRepresentative/a.definitivePrice));
 
-    document.getElementById("ranking-count").textContent = active.length ? "(" + active.length + "件)" : "";
-    document.getElementById("ended-count").textContent = ended.length ? "(" + ended.length + "件)" : "";
+    const activeTotal = active.length;
+    const activeShown = selectedCategory === "総合" ? active.slice(0, RANKING_TOP_CAP) : active;
+    const endedShown = selectedCategory === "総合" ? ended.slice(0, RANKING_TOP_CAP) : ended;
+
+    const countEl = document.getElementById("ranking-count");
+    const capNote = document.getElementById("cap-note");
+    if(selectedCategory === "総合" && activeTotal > RANKING_TOP_CAP){
+      countEl.textContent = "(" + activeShown.length + "件 / 全" + activeTotal + "件中)";
+      capNote.textContent = "※「総合」では倍率上位" + RANKING_TOP_CAP + "件まで表示しています。カテゴリを選ぶとそのカテゴリの全件が表示されます。";
+    } else {
+      countEl.textContent = activeShown.length ? "(" + activeShown.length + "件)" : "";
+      capNote.textContent = "";
+    }
+    document.getElementById("ended-count").textContent = endedShown.length ? "(" + endedShown.length + "件)" : "";
 
     const rankBody = document.getElementById("ranking-body");
-    rankBody.innerHTML = active.length
-      ? active.map((it,i)=>rankCardHtml(it, i+1)).join("")
+    rankBody.innerHTML = activeShown.length
+      ? activeShown.map((it,i)=>rankCardHtml(it, i+1)).join("")
       : '<div class="empty-note">現在ランキングに表示できる商品がありません。</div>';
 
     const endedBody = document.getElementById("ended-body");
-    endedBody.innerHTML = ended.length
-      ? ended.map((it,i)=>rankCardHtml(it, i+1)).join("")
+    endedBody.innerHTML = endedShown.length
+      ? endedShown.map((it,i)=>rankCardHtml(it, i+1)).join("")
       : '<div class="empty-note">終了した応募はまだありません。</div>';
 
     // toggle open/close
