@@ -1,0 +1,107 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # 毎週月曜 0:00 UTC = 月曜 9:00 JST
+    - cron: '0 0 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--allowedTools WebSearch,Read,Write,Edit --max-turns 30'
+          prompt: |
+            あなたはこのリポジトリの data.json (プレ値台帳アプリのデータ) を
+            週次で更新するエージェントです。以下の手順に厳密に従ってください。
+
+            ## リポジトリの構成
+            - data.json: アプリが表示するランキングデータ本体
+            - sources.json: 優先的にチェックすべき情報源(URL / Xアカウント)のリスト
+
+            ## data.json のスキーマ
+            ```
+            {
+              "generatedAt": "YYYY-MM-DD",
+              "items": [
+                {
+                  "id": "変更しない一意な英数字スラッグ",
+                  "name": "商品名",
+                  "genre": "ジャンル",
+                  "definitivePrice": 定価(数値, 円),
+                  "currentPriceRepresentative": 現在相場の代表値(数値, 円),
+                  "confidence": "confirmed" または "estimated",
+                  "rationale": "倍率の根拠を1〜3行で",
+                  "marketPrices": [{"site": "サイト名", "price": 数値またはnull}, ...],
+                  "stores": [
+                    {
+                      "name": "店舗名(変更しない)",
+                      "eligibility": "応募資格・条件",
+                      "periodLabel": "受付期間の表示用文字列(例:2026/1/30〜2/28、または 不定期 等)",
+                      "periodStart": "YYYY-MM-DD またはnull",
+                      "periodEndDate": "YYYY-MM-DD またはnull(判明している場合のみ設定。不明ならnull)",
+                      "receiveMethod": "受け取り方法",
+                      "officialUrl": "公式サイトURL"
+                    }
+                  ]
+                }
+              ]
+            }
+            ```
+
+            ## 重要な制約(必ず守ること)
+            1. **既存アイテムの "id" と、既存 store の "name" は絶対に変更しないこと。**
+               ユーザーのブラウザには id + store名をキーにした個人の応募状況(応募済み/当選/落選/メモ)が
+               保存されており、これらを変更するとユーザーの記録が失われます。
+               内容(価格・確度・根拠・期間など)の更新は自由に行ってよいですが、
+               キーとなる id / store.name のリネームは禁止です。
+            2. **実在しないURLを絶対に作らないここと。** WebSearchで確認できたURLのみを記載し、
+               確認できない場合は officialUrl に空文字ではなく最も確からしい公式トップページURL、
+               またはそれも不明なら null を設定してください。
+            3. data.json は常に有効なJSONであること(末尾カンマ禁止、文字列は適切にエスケープ)。
+            4. currentPriceRepresentative / definitivePrice は数値型(文字列にしない)。
+            5. confidence は実際の取引価格データ(買取実績・フリマ相場の複数実例など)に基づく場合のみ
+               "confirmed"。根拠が弱い・推測ベースの場合は必ず "estimated" とすること。
+
+            ## やること
+            1. sources.json を読み、そこに登録されているサイト・Xアカウントを優先的にWebSearchで確認し、
+               新しい抽選・予約販売情報がないか調べる。
+            2. それに加えて、幅広いジャンル(トレーディングカード、高級ウイスキー・酒類、自動車の記念車・
+               限定モデル、ガンプラ等プラモデル限定版、スニーカー・アパレル限定コラボ、家電・ゲーム機の
+               限定モデル、フィギュア・くじ、高級腕時計など)から、新たにプレ値がつきそうな抽選・予約
+               販売情報がないか調べる。
+            3. 既存アイテムの currentPriceRepresentative・marketPrices・confidence・rationale・
+               store の periodLabel/periodStart/periodEndDate 等を、調査結果に基づいて更新する。
+            4. 明らかに定価より数倍のプレ値がついている新商品を見つけたら、新しい id(スラッグ形式、
+               既存と重複しないもの)でアイテムを追加してよい(1回の実行で追加は最大3件程度まで)。
+            5. 受付期限(periodEndDate)が判明して、かつ全ての store の periodEndDate が過去日付に
+               なった場合でも、そのアイテムは data.json 内に残してよい(削除しない)。
+               「終了」判定と表示側への振り分けはアプリ側(index.html)が自動で行うため、
+               data.json 側では終了アイテムを削除・特別扱いする必要はない。
+            6. data.json の generatedAt を今日の日付(YYYY-MM-DD, UTC基準)に更新する。
+            7. 変更後、data.json が有効なJSONであることを自分で確認する。
+               (git操作はあなたの後段のワークフローステップが自動で行うので、あなたはdata.jsonの
+               編集のみ行えばよい。commitやpushは行わなくてよい/その権限もない。)
+
+            index.html や sources.json、ワークフローファイル自体は変更しないこと。
+            対象は data.json のみです。
+
+      - name: Configure git and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data.json)" ]; then
+            git add data.json
+            git commit -m "Weekly data update $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to data.json"
+          fi
