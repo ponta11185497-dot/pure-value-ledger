@@ -19,7 +19,7 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          claude_args: '--allowedTools WebSearch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 30'
+          claude_args: '--allowedTools WebSearch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 60'
           prompt: |
             あなたはこのリポジトリの data.json (プレ値台帳アプリのデータ) を
             週次で更新するエージェントです。以下の手順に厳密に従ってください。
@@ -101,6 +101,7 @@ jobs:
             対象は data.json のみです。
 
       - name: Configure git and push
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
