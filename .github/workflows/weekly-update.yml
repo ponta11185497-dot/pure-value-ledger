@@ -2,8 +2,8 @@ name: Weekly Data Update
 
 on:
   schedule:
-    # 毎週月曜 0:00 UTC = 月曜 9:00 JST
-    - cron: '0 0 * * 1'
+    # 毎週月・木 0:00 UTC = 月・木 9:00 JST(週2回)
+    - cron: '0 0 * * 1,4'
   workflow_dispatch: {}
 
 permissions:
