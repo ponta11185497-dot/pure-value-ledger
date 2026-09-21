@@ -70,44 +70,9 @@
     "addedAt": "2026-09-18"
   },
   {
-    "id": "s-1789677220062-a60hv",
-    "type": "url",
-    "value": "https://snkrdunk.com/articles/14618/",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
-    "id": "s-1789677230098-8dh8k",
-    "type": "url",
-    "value": "https://orenoraresne.com/",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
-    "id": "s-1789677251722-7a2yd",
-    "type": "url",
-    "value": "https://sneaker-jungle.com/%E3%81%AB%E3%82%85%E3%83%BC%E3%81%9A%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%8A%BD%E9%81%B8%E7%A2%BA%E7%8E%87%E3%81%A8%E3%83%97%E3%83%AC%E5%80%A4%E3%81%AE%E9%96%A2%E4%BF%82%EF%BC%81/",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
     "id": "s-1789677267738-fibq3",
     "type": "url",
     "value": "https://cardchusen.com/",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
-    "id": "s-1789677284106-p81wz",
-    "type": "url",
-    "value": "https://altema.jp/pokemoncard/koutou",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
-    "id": "s-1789677300218-4huf6",
-    "type": "url",
-    "value": "https://furima-souba.com/articles/ichiban-kuji-last-one-mercari/",
     "note": "",
     "addedAt": "2026-09-18"
   },
@@ -119,13 +84,6 @@
     "addedAt": "2026-09-18"
   },
   {
-    "id": "s-1789677327074-pxpi6",
-    "type": "url",
-    "value": "https://laurier-hub.com/lottery/",
-    "note": "",
-    "addedAt": "2026-09-18"
-  },
-  {
     "id": "s-1789677337666-uiz37",
     "type": "url",
     "value": "https://nyuka-now.com/archives/category/chusen",
@@ -133,10 +91,185 @@
     "addedAt": "2026-09-18"
   },
   {
-    "id": "s-1789677348238-vtyr9",
+    "id": "s-1790029030113-gker0",
     "type": "url",
-    "value": "https://tenbaiquest.com/",
+    "value": "https://www.pokemon-card.com/",
+    "note": "ポケモンカード公式",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030114-6a8km",
+    "type": "url",
+    "value": "https://www.yugioh-card.com/",
+    "note": "遊戯王カードゲーム公式",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030115-8t9vh",
+    "type": "url",
+    "value": "https://bandainamco-am.co.jp/official_shop/onepiece-cardgame/",
+    "note": "ONE PIECEカードゲーム公式ショップ",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030116-k2muc",
+    "type": "url",
+    "value": "https://bandainamco-am.co.jp/official_shop/dbs-cardgame/",
+    "note": "ドラゴンボールカード公式ショップ",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030117-9xzfu",
+    "type": "url",
+    "value": "https://bushiroad-store.com/collections/ws-tcg",
+    "note": "ヴァイスシュヴァルツ公式ストア",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030118-juy1e",
+    "type": "url",
+    "value": "https://toreka-chusen.com/",
+    "note": "トレチュー(ポケカ・ワンピ・遊戯王横断まとめ)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030119-5o06m",
+    "type": "url",
+    "value": "https://gamenv.net/tc/",
+    "note": "人気トレカゲットナビ",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030120-yealj",
+    "type": "x",
+    "value": "@pokecamatomeru",
     "note": "",
-    "addedAt": "2026-09-18"
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030121-ilmk1",
+    "type": "x",
+    "value": "@pokecayoyaku",
+    "note": "",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030122-c8bvj",
+    "type": "x",
+    "value": "@PokeGetInfoMain",
+    "note": "",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030123-2kdls",
+    "type": "x",
+    "value": "@pokecachan",
+    "note": "",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030124-byzh8",
+    "type": "x",
+    "value": "@dbfw_cardgameJP",
+    "note": "",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030125-2dieb",
+    "type": "x",
+    "value": "@wstcg",
+    "note": "",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030126-98qp1",
+    "type": "url",
+    "value": "https://takaratomymall.jp/",
+    "note": "タカラトミーモール公式(トミカ限定品)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030127-9o47z",
+    "type": "url",
+    "value": "https://gunpla.blog/pbandai",
+    "note": "プレバン予約速報(ガンプラ専門まとめ)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030128-nbze2",
+    "type": "x",
+    "value": "@goodsmilejp",
+    "note": "グッドスマイルカンパニー公式ショップ",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030129-zlrng",
+    "type": "x",
+    "value": "@gsc_kahotan",
+    "note": "カホタン(新作予約情報)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030130-iy2p4",
+    "type": "url",
+    "value": "https://gourmet.watch.impress.co.jp/",
+    "note": "グルメWatch(イオン等の山崎・白州・響抽選速報)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030131-8rkuv",
+    "type": "url",
+    "value": "https://www.nikka.com/",
+    "note": "ニッカウヰスキー公式",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030132-om2q8",
+    "type": "url",
+    "value": "https://norifune.com/",
+    "note": "ノリフネ(日本ウイスキー購入方法まとめ)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030133-sf7rn",
+    "type": "url",
+    "value": "https://peaty.club/",
+    "note": "申込可能なウイスキー抽選まとめ",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030134-713dg",
+    "type": "url",
+    "value": "https://www.takashimaya.co.jp/",
+    "note": "高島屋(アプリ限定抽選あり)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030135-h1zby",
+    "type": "url",
+    "value": "https://supreme.com/jp",
+    "note": "Supreme公式(日本)",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030136-tgsam",
+    "type": "url",
+    "value": "https://street-antenna.com/",
+    "note": "Supreme等のWeb抽選応募方法・締切解説",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030137-5w1a7",
+    "type": "url",
+    "value": "https://yakkun-fashion.jp/",
+    "note": "Supreme等の抽選開催を速報",
+    "addedAt": "2026-09-22"
+  },
+  {
+    "id": "s-1790029030138-jfvgr",
+    "type": "url",
+    "value": "https://www.adidas.jp/mobileapps",
+    "note": "adidas公式CONFIRMEDアプリ案内ページ",
+    "addedAt": "2026-09-22"
   }
 ]
