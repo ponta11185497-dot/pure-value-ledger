@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-09-24",
   "items": [
     {
       "id": "pbandai-hy2m-gundam",
@@ -141,7 +141,7 @@
       "definitivePrice": 2499200,
       "currentPriceRepresentative": 5900000,
       "confidence": "confirmed",
-      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は高止まりしており、2026年8月31日時点の126500LN中古相場は平均592.7万円・中央値561万円(139件の販売実績に基づく、前年比+16.2%)、白文字盤の最高買取額は616万円。定価の2倍超で恒常的に推移しており、正規店での入手困難度も依然として非常に高い。",
+      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は高止まりしており、2026年8月31日時点の126500LN中古相場は平均592.7万円・中央値561万円(前年比+16.2%)、白文字盤の最高買取額は616万円。黒文字盤はやや安く500万〜580万円程度で推移。定価の2倍超で恒常的に推移しており、正規店での入手困難度も依然として非常に高い。",
       "marketPrices": [
         {
           "site": "中古時計店(126500LN、2026年8月時点平均)",
@@ -615,6 +615,41 @@
           "periodEndDate": "2026-09-24",
           "receiveMethod": "当選後決済 → 自宅発送",
           "officialUrl": "https://www.konamistyle.jp/products/detail.php?product_id=113435"
+        }
+      ]
+    },
+    {
+      "id": "dbs-fusionworld-crossforce-box",
+      "name": "ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック「CROSS FORCE」BOX",
+      "genre": "トレーディングカード",
+      "category": "トレカ",
+      "definitivePrice": 5280,
+      "currentPriceRepresentative": 11000,
+      "confidence": "confirmed",
+      "rationale": "2026年6月13日発売、1BOX24パック入り定価5,280円。ベジット等のSCR(シークレットレア)を収録し話題化、発売直後から未開封BOXが10,000〜11,000円(定価の約2倍)で取引され、2026年9月時点の最新取引相場は12,300円まで上昇している例もある。プレミアムバンダイでのWEB抽選(6/18締切)は落選者が続出するほどの人気だった。",
+      "marketPrices": [
+        {
+          "site": "PRICE BASE(未開封BOX、2026年6月時点)",
+          "price": 10500
+        },
+        {
+          "site": "PRICE BASE(未開封BOX、2026年9月時点)",
+          "price": 12300
+        },
+        {
+          "site": "メルカリ",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "プレミアムバンダイ",
+          "eligibility": "バンダイナムコID会員登録のみ(購入実績条件なし)",
+          "periodLabel": "抽選済み(2026年6月18日23:00締切、当選発表6月下旬)。以降は不定期に新弾発売のたび実施",
+          "periodStart": null,
+          "periodEndDate": "2026-06-18",
+          "receiveMethod": "当選後決済 → 自宅発送",
+          "officialUrl": "https://p-bandai.jp/"
         }
       ]
     }
