@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24",
+  "generatedAt": "2026-09-28",
   "items": [
     {
       "id": "pbandai-hy2m-gundam",
@@ -139,17 +139,17 @@
       "genre": "高級腕時計",
       "category": "その他",
       "definitivePrice": 2499200,
-      "currentPriceRepresentative": 5900000,
+      "currentPriceRepresentative": 5750000,
       "confidence": "confirmed",
-      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は高止まりしており、2026年8月31日時点の126500LN中古相場は平均592.7万円・中央値561万円(前年比+16.2%)、白文字盤の最高買取額は616万円。黒文字盤はやや安く500万〜580万円程度で推移。定価の2倍超で恒常的に推移しており、正規店での入手困難度も依然として非常に高い。",
+      "rationale": "2026年1月の定価改定(126500LNは249.92万円)後も中古相場は高止まりしており、2026年9月時点の126500LN中古相場は白文字盤の最高買取額616万円、ホワイトランダム(SS)は560万〜576万円程度、8月の参考買取実績585万円、7月は483万〜616万円のレンジと高値圏が継続(前年比+16.2%)。定価の2倍超で恒常的に推移しており、正規店での入手困難度も依然として非常に高い。",
       "marketPrices": [
         {
-          "site": "中古時計店(126500LN、2026年8月時点平均)",
-          "price": 5927011
+          "site": "中古時計店(126500LN白文字盤、2026年9月時点最高買取額)",
+          "price": 6160000
         },
         {
-          "site": "中古時計店(白文字盤、最高買取額)",
-          "price": 6160000
+          "site": "中古時計店(126500LNホワイトランダムSS、2026年9月時点)",
+          "price": 5760000
         },
         {
           "site": "eBay",
@@ -191,7 +191,7 @@
         {
           "name": "mita sneakers",
           "eligibility": "デジタル抽選と店頭抽選は重複応募不可。国内居住者限定。転売目的が発覚した場合は当選取消の明記あり",
-          "periodLabel": "不定期(コラボ発売のたび、直近はNew Balance U1890A COW PRINTが2026/9/16発売・引換は9/16〜9/21)",
+          "periodLabel": "不定期・高頻度(月1回程度のペースでコラボ発売のたび実施。直近はNew Balance U1890A COW PRINTが2026/9/16発売・引換は9/16〜9/21で終了、次回モデルは公式ブログ/X上で都度告知)",
           "periodStart": "2026-09-16",
           "periodEndDate": "2026-09-21",
           "receiveMethod": "当選後、店頭受取または発送(商品による)",
@@ -342,7 +342,7 @@
         {
           "name": "マイニンテンドーストア",
           "eligibility": "ニンテンドーアカウント必須、Switch Online累積1年以上加入、Switch1プレイ時間50h以上等(回により変動)",
-          "periodLabel": "不定期(2025年は月1回程度のペース)",
+          "periodLabel": "不定期(月1回程度のペースで継続実施中。2026年9月時点で第5回まで実施済み、第6回の詳細は公式サイトで告知予定)",
           "periodStart": null,
           "periodEndDate": null,
           "receiveMethod": "当選後決済 → 自宅発送",
@@ -650,6 +650,41 @@
           "periodEndDate": "2026-06-18",
           "receiveMethod": "当選後決済 → 自宅発送",
           "officialUrl": "https://p-bandai.jp/"
+        }
+      ]
+    },
+    {
+      "id": "yugioh-original-artwork-collection",
+      "name": "遊戯王OCG ORIGINAL ARTWORK COLLECTION",
+      "genre": "トレーディングカード",
+      "category": "トレカ",
+      "definitivePrice": 5940,
+      "currentPriceRepresentative": 10000,
+      "confidence": "estimated",
+      "rationale": "推測・要注意: 2026年9月26日発売の原作『遊☆戯☆王』カードシーン再現スペシャルパック(1BOX15パック入り、定価5,940円)。原作再現の「MANGA-STYLEカード」やシリアルNo.付きグランドマスターレア(GMR)を収録し話題化、発売直後の未開封BOX初動予想価格は複数のトレカ情報サイト集計で約10,000円(定価の約1.7倍)。プリズマティックシークレットレア(オーバーフレーム)などの高額単品カードは14,000〜30,000円超で取引されている。発売直後で確定した複数の実売実例による裏付けはまだ薄く、確度は推測レベル。",
+      "marketPrices": [
+        {
+          "site": "未開封BOX初動予想(複数トレカ情報サイト集計)",
+          "price": 10000
+        },
+        {
+          "site": "プリズマティックシークレットレア(単品参考、オーバーフレーム)",
+          "price": 20000
+        },
+        {
+          "site": "メルカリ",
+          "price": null
+        }
+      ],
+      "stores": [
+        {
+          "name": "カーナベル",
+          "eligibility": "対象商品購入+公式X投稿のリポストで抽選エントリー(購入・応募ともオンラインで完結)",
+          "periodLabel": "新規入荷のたび複数回実施(2026年9月は9/1〜9/14、9/17〜9/23の計2回実施済み)",
+          "periodStart": "2026-09-17",
+          "periodEndDate": "2026-09-23",
+          "receiveMethod": "当選後、購入商品と共に自宅発送",
+          "officialUrl": "https://www.ka-nabell.com/"
         }
       ]
     }
