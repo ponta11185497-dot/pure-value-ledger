@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19",
+  "generatedAt": "2026-10-22",
   "items": [
     {
       "id": "pbandai-hy2m-gundam",
@@ -513,10 +513,10 @@
       "stores": [
         {
           "name": "プレミアムバンダイ",
-          "eligibility": "バンダイナムコID会員登録、抽選(2026/8/3 11:00〜9/2 23:00受付済み)",
-          "periodLabel": "抽選済み(2026/8/3〜9/2)。発送は2027年2月頃予定",
-          "periodStart": "2026-08-03",
-          "periodEndDate": "2026-09-02",
+          "eligibility": "バンダイナムコID会員登録、抽選(1次は2026/8/3 11:00〜9/2 23:00受付済み)",
+          "periodLabel": "1次抽選は2026/8/3〜9/2で終了。2次抽選販売が2026/10/14 12:00から実施(終了日時は未確認、商品ページで要確認)。発送は2027年2月頃予定",
+          "periodStart": "2026-10-14",
+          "periodEndDate": null,
           "receiveMethod": "当選後決済 → 2027年2月頃発送予定",
           "officialUrl": "https://p-bandai.jp/item/item-1000255670/"
         }
