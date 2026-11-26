@@ -1008,6 +1008,11 @@
           priceCellHtml("直近成約価格", p.recentSoldPrice) +
           priceCellHtml("予想売却価格", p.estimatedResalePrice) +
         "</div>" +
+        '<div class="market-prices">' +
+          priceCellHtml("想定純利益", p.estimatedNetProfit) +
+          priceCellHtml("利益率(%)", p.profitMarginPct) +
+          priceCellHtml("獲得ANAマイル", p.anaMiles) +
+        "</div>" +
         '<div class="store-meta" style="margin-top:8px;"><b>公式リンク:</b> <a href="'+escapeHtml(p.officialUrl||"#")+'" target="_blank" rel="noopener">'+escapeHtml(p.officialUrl||"未取得")+"</a></div>" +
         '<div class="store-meta"><b>最終確認:</b> '+escapeHtml((p.lastSeenAt||"-").slice(0,16).replace("T"," "))+"</div>" +
       "</div>" +

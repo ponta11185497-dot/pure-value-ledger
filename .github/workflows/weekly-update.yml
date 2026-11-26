@@ -69,7 +69,10 @@ jobs:
               "purchasePrice": {...}, "buybackPrice": {...}, "recentSoldPrice": {...},
               "estimatedResalePrice": {...}, "platformFee": {...}, "shippingFee": {...},
               "estimatedNetProfit": {...}, "profitMarginPct": {...},
-              "anaMiles": {...},  // 100円=1.5マイルで、purchasePrice等から算出できる場合のみ計算
+              "anaMiles": {...},
+              // ↑ estimatedNetProfit/profitMarginPct/anaMiles は、この後のステップで
+              //   computeFinancials.js が purchasePrice 等から自動計算します。
+              //   あなたはこれら3項目を書き込まず null のままにしてください(二重計算防止)。
               "reservationStart": {...}, "applicationDeadline": {...}, "winnerAnnounceDate": {...},
               "paymentDate": {...}, "shipDate": {...},
               "purchasableQty": {...}, "visaPayment": {"value": true/false/null, "source": {...}},
@@ -87,6 +90,16 @@ jobs:
             1. `ai_queue.json` の各エントリを順にWebFetchし、実在するページの内容から具体的な商品
                (型番・JAN等の単位で個体識別できるもの)を抽出し、products.json に反映する。
                既存商品と同一と判断できる場合は新規作成せず既存アイテムを更新すること。
+               - まとめ記事・一覧ページ(例: トレチュー、ガンプラ予約速報等)で見出しだけ
+                 価格や当選発表日が分からない場合は、そのまとめ記事内の個別記事/個別商品ページの
+                 リンクを**可能な範囲で複数件(目安5〜10件)実際にWebFetchして**具体的な価格・
+                 日時を確認してから登録すること。一覧ページだけ見て諦めないこと。
+               - `type: "x"`(Xアカウント)のソースは `https://x.com/...` を直接WebFetchしても
+                 ブロックされるため、代わりにWebSearchで `@アカウント名` や該当ブランド名+
+                 「抽選」「予約」等のキーワードで検索し、ヒットした一次情報(公式サイト・
+                 公式リリース)のページをWebFetchして内容を確認すること。
+               - HTTP 403やタイムアウトで取得できないサイトは、User-Agent偽装や認証回避など
+                 利用規約に反する手段で突破しようとしないこと。失敗として記録してよい。
             2. `sources.json` に未登録の新しい監視サイト候補をWebSearchで探し、見つかった場合は
                `sources.json` に `status: "candidate"`, `collectMethod: "ai-webfetch"` として追加する
                (まだ `active` にはしない。候補が多すぎる場合は特に有望なもの数件まででよい)。
@@ -104,6 +117,10 @@ jobs:
             `プレ値台帳.html`、`data.json`、ワークフローファイル自体、`scripts/` 配下の
             決定的収集コードは変更しないこと。対象は products.json / sources.json /
             collection_log.json のみです。
+
+      # ステップ3: 売却利益・利益率・ANAマイルの自動計算(AIには計算させない、決定的スクリプト)。
+      - name: Compute profit / margin / ANA miles
+        run: node scripts/computeFinancials.js
 
       - name: Configure git and push
         if: always()
