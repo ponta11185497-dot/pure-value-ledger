@@ -150,24 +150,41 @@
         "source": null
       },
       "estimatedResalePrice": {
-        "value": null,
-        "source": null
+        "value": 8000,
+        "source": {
+          "siteName": "PRICE BASE(主要フリマの取引相場を集計した第三者サイト・2026-11-25時点)",
+          "url": "https://price-base.com/useful/stormemeralda-box-market",
+          "fetchedAt": "2026-11-26T05:50:00Z"
+        },
+        "confidence": "estimated"
       },
       "platformFee": {
-        "value": null,
-        "source": null
+        "value": 800,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(既定手数料率10%を仮定)",
+          "url": null,
+          "fetchedAt": "2026-11-26T05:42:05.398Z"
+        }
       },
       "shippingFee": {
         "value": null,
         "source": null
       },
       "estimatedNetProfit": {
-        "value": null,
-        "source": null
+        "value": 1200,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
+          "url": null,
+          "fetchedAt": "2026-11-26T05:42:05.398Z"
+        }
       },
       "profitMarginPct": {
-        "value": null,
-        "source": null
+        "value": 20,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
+          "url": null,
+          "fetchedAt": "2026-11-26T05:42:05.398Z"
+        }
       },
       "anaMiles": {
         "value": 90,
@@ -229,15 +246,25 @@
             "url": "https://nyuka-now.com/archives/2459",
             "fetchedAt": "2026-11-26T06:00:00Z"
           }
+        },
+        {
+          "date": "2026-11-26",
+          "field": "estimatedResalePrice",
+          "value": 8000,
+          "source": {
+            "siteName": "PRICE BASE(主要フリマの取引相場を集計した第三者サイト・2026-11-25時点)",
+            "url": "https://price-base.com/useful/stormemeralda-box-market",
+            "fetchedAt": "2026-11-26T05:50:00Z"
+          }
         }
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-26T05:50:00Z",
         "status": "not_found",
-        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+        "note": "個別の買取業者ページ・成約実績は確認できず。PRICE BASEの集計フリマ相場8,000円(2026-11-25)を第三者集計のためestimatedで記録。カードラッシュ買取8,000円は2026-10-01時点で古く不採用"
       }
     },
     {
