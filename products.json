@@ -1,5 +1,2812 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-11-26",
   "schemaVersion": 1,
-  "items": []
+  "items": [
+    {
+      "id": "pokemoncard-hadou-seeker-box",
+      "name": "ポケモンカードゲーム 拡張パック ハドウシーカー(1BOX)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": null,
+        "source": null
+      },
+      "purchasePrice": {
+        "value": 6000,
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": 90,
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": "2026-11-26T23:59:00+09:00",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": "2026-12-03",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-11-27",
+        "source": {
+          "siteName": "ポケモンカード公式",
+          "url": "https://www.pokemon-card.com/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://www.pokemon-card.com/",
+      "status": "本日締切",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "purchasePrice",
+          "value": 6000,
+          "source": {
+            "siteName": "入荷Now",
+            "url": "https://nyuka-now.com/archives/2459",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "トレカ"
+    },
+    {
+      "id": "pokemoncard-storm-emeralda-box",
+      "name": "ポケモンカードゲーム ストームエメラルダ(1BOX)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": null,
+        "source": null
+      },
+      "purchasePrice": {
+        "value": 6000,
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": 90,
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": "2026-11-27T23:59:00+09:00",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": "2026-11-29",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://nyuka-now.com/archives/2459",
+      "status": "本日応募可能",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "purchasePrice",
+          "value": 6000,
+          "source": {
+            "siteName": "入荷Now",
+            "url": "https://nyuka-now.com/archives/2459",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "トレカ"
+    },
+    {
+      "id": "pokemoncard-30th-celebration-premium-deck-set-eevee-umbreon",
+      "name": "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット(イーブイ/ブラッキー)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": null,
+        "source": null
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": "2026-11-29T23:30:00+09:00",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": "2026-12-04",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://nyuka-now.com/archives/2459",
+      "status": "本日応募可能",
+      "priceHistory": [],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "トレカ"
+    },
+    {
+      "id": "pokemoncard-starter-set-ex-aeon",
+      "name": "ポケモンカードゲーム 構築デッキ スターターセットex(3種)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": null,
+        "source": null
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": "2026-11-29T23:59:00+09:00",
+        "source": {
+          "siteName": "入荷Now",
+          "url": "https://nyuka-now.com/archives/2459",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://nyuka-now.com/archives/2459",
+      "status": "本日応募可能",
+      "priceHistory": [],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "トレカ"
+    },
+    {
+      "id": "suntory-hibiki-japanese-harmony-amazon",
+      "name": "サントリーウイスキー 響 JAPANESE HARMONY 700mL",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": null,
+        "source": null
+      },
+      "purchasePrice": {
+        "value": 8800,
+        "source": {
+          "siteName": "ウイスキー関連ニュース(Impress Watch)",
+          "url": "https://gourmet.watch.impress.co.jp/docs/news/pickup/2158765.html",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://gourmet.watch.impress.co.jp/docs/news/pickup/2158765.html",
+      "status": "unknown",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "purchasePrice",
+          "value": 8800,
+          "source": {
+            "siteName": "ウイスキー関連ニュース(Impress Watch)",
+            "url": "https://gourmet.watch.impress.co.jp/docs/news/pickup/2158765.html",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "ウィスキー"
+    },
+    {
+      "id": "travisscott-nike-af1-07-low-rs-white",
+      "name": "Travis Scott × Rockstar Games × Nike AIR FORCE 1 '07 LOW RS White",
+      "model": "JJ7602-100",
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 19800,
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": "2026-11-21T09:00:00+09:00",
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "applicationDeadline": {
+        "value": "2026-11-25T10:00:00+09:00",
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+      "status": "受付終了",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 19800,
+          "source": {
+            "siteName": "YAKKUN FASHION",
+            "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "スニーカー"
+    },
+    {
+      "id": "travisscott-nike-af1-07-low-rs-black",
+      "name": "Travis Scott × Rockstar Games × Nike AIR FORCE 1 '07 LOW RS Black",
+      "model": "JJ7604-001",
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 19800,
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": "2026-11-21T09:00:00+09:00",
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "applicationDeadline": {
+        "value": "2026-11-25T10:00:00+09:00",
+        "source": {
+          "siteName": "YAKKUN FASHION",
+          "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+      "status": "受付終了",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 19800,
+          "source": {
+            "siteName": "YAKKUN FASHION",
+            "url": "https://yakkun-fashion.jp/travis-scott-x-nike-air-force-1-07-low-rs/",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "スニーカー"
+    },
+    {
+      "id": "pbandai-1000260835",
+      "name": "プレミアムバンダイ HG 1/144 ティエルヴァ",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2640,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-06",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260835/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2640,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260744",
+      "name": "プレミアムバンダイ HG 1/144 G-セルフ(大気圏用パック&宇宙用パック)(劇場版Ver.)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 6050,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260744/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 6050,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260742",
+      "name": "プレミアムバンダイ HG 1/144 マンダラガンダム【再販】【3次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2915,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260742/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2915,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260741",
+      "name": "プレミアムバンダイ HG 1/144 ゲルググ(GQ)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2420,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260741/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2420,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260737",
+      "name": "プレミアムバンダイ HG 1/144 デスルター【再販】【3次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2860,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260737/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2860,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260719",
+      "name": "プレミアムバンダイ MG 1/100 フルアーマー・ユニコーンガンダム(レッドカラーVer.)【再販】【2次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 9790,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260719/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 9790,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000260718",
+      "name": "プレミアムバンダイ RG 1/144 ストライクフリーダムガンダム ディアクティブモード【再販】【4次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 3850,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000260718/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 3850,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000259097",
+      "name": "プレミアムバンダイ HG 1/144 ミーティアユニット【再販】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 8030,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000259097/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 8030,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000259090",
+      "name": "プレミアムバンダイ HG 1/144 ガンダムバルバトスアダプト【4次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2420,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-02",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000259090/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2420,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000258907",
+      "name": "プレミアムバンダイ PG UNLEASHED 1/60 RX-78-2 ガンダム クリアカラーボディ【再販】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 5720,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000258907/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 5720,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000258905",
+      "name": "プレミアムバンダイ HG 1/144 ガンダムエアリアル パーメットスコア・シックス【再販】【4次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2200,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000258905/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2200,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000258903",
+      "name": "プレミアムバンダイ HG 1/144 レオン",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 2640,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000258903/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 2640,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000258900",
+      "name": "プレミアムバンダイ HG 1/144 Dガンダムセカンド",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 3080,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000258900/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 3080,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000258897",
+      "name": "プレミアムバンダイ MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 3850,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000258897/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 3850,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000255655",
+      "name": "プレミアムバンダイ MG 1/100 ガンダムアストレア+プロトGNツインブロードブレイド",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 7150,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-10",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000255655/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 7150,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000255638",
+      "name": "プレミアムバンダイ MG 1/100 ガンダムAGE-1 2号機【再販】【2次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 4290,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-10",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000255638/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 4290,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000254424",
+      "name": "プレミアムバンダイ SDW HEROES 復活輝羅鋼 DXセット[スペシャルコーティング]",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 5720,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2027-01",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000254424/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 5720,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000255597",
+      "name": "プレミアムバンダイ PG UNLEASHED 1/60 νガンダム用 フィン・ファンネル&クリアカラーボディ",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 16500,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-12",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000255597/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 16500,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000253723",
+      "name": "プレミアムバンダイ HG 1/144 Dガンダムセカンド【3次】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 3080,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-08",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000253723/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 3080,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    },
+    {
+      "id": "pbandai-1000253330",
+      "name": "プレミアムバンダイ RG 1/144 量産型ズゴック【再販】",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 3300,
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": "2026-10",
+        "source": {
+          "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+          "url": "https://gunpla.blog/pbandai",
+          "fetchedAt": "2026-11-26T06:00:00Z"
+        }
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://p-bandai.jp/item/item-1000253330/",
+      "status": "再販",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 3300,
+          "source": {
+            "siteName": "ガンプラ情報局(プレミアムバンダイ)",
+            "url": "https://gunpla.blog/pbandai",
+            "fetchedAt": "2026-11-26T06:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T06:00:00Z",
+      "lastSeenAt": "2026-11-26T06:00:00Z",
+      "category": "おもちゃ"
+    }
+  ]
 }

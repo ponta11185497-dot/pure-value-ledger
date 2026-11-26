@@ -349,5 +349,23 @@
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
     "status": "active"
+  },
+  {
+    "id": "cand-torecamap",
+    "type": "url",
+    "value": "https://torecamap.co.jp/column/pokemon-chusen/",
+    "note": "トレカマップ(ポケカ抽選情報まとめ。WebSearchで発見・未取得確認)",
+    "addedAt": "2026-11-26",
+    "collectMethod": "ai-webfetch",
+    "status": "candidate"
+  },
+  {
+    "id": "cand-altema",
+    "type": "url",
+    "value": "https://altema.jp/pokemoncard/celebrationcollection-tyusen",
+    "note": "アルテマ ポケカ抽選・予約まとめ(WebSearchで発見・記事内日付が古い可能性、未取得確認)",
+    "addedAt": "2026-11-26",
+    "collectMethod": "ai-webfetch",
+    "status": "candidate"
   }
 ]
