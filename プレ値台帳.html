@@ -80,6 +80,21 @@
   .status-pill.won{color:var(--green);background:var(--green-soft);}
   .status-pill.lost{color:var(--red);background:var(--red-soft);}
 
+  /* Collection log table (情報源管理) */
+  table.collectlog{width:100%;border-collapse:collapse;font-size:.82rem;background:var(--bg-panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  table.collectlog th{
+    text-align:left;color:var(--text-dim);font-weight:600;font-size:.72rem;
+    padding:8px 10px;border-bottom:1px solid var(--line);background:var(--bg-panel-2);
+  }
+  table.collectlog td{padding:9px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  table.collectlog tr:last-child td{border-bottom:none;}
+  table.collectlog tr.log-failed td{background:var(--red-soft);}
+  .log-pill{display:inline-block;padding:2px 9px;border-radius:10px;font-size:.68rem;font-weight:600;white-space:nowrap;}
+  .log-pill.ok{color:var(--green);background:var(--green-soft);}
+  .log-pill.empty_confirmed{color:var(--text-dim);background:var(--bg-panel-2);}
+  .log-pill.pending_ai{color:var(--orange);background:var(--orange-soft);}
+  .log-pill.fetch_failed{color:var(--red);background:var(--red-soft);}
+
   /* Ranking cards */
   .rank-card{
     background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;
@@ -214,6 +229,20 @@
         <span class="io-hint">週次の自動調査に使う場合は、追加後にこのファイルをプレ値フォルダに保存してください</span>
       </div>
     </div>
+  </section>
+
+  <section id="newproducts-section">
+    <h2 class="section-title">収集結果(新方式) <span class="count" id="newproducts-count"></span></h2>
+    <div class="cap-note">固定の監視サイト一覧から実際に取得できた商品のみを表示します(AIの一般知識による商品リスト生成は行いません)。</div>
+    <div id="newproducts-body"></div>
+  </section>
+
+  <section id="collectlog-section">
+    <details class="ended">
+      <summary>情報源管理(収集ログ) <span class="count" id="collectlog-count"></span></summary>
+      <div class="cap-note" id="collectlog-updated"></div>
+      <div id="collectlog-body"></div>
+    </details>
   </section>
 
   <section id="ended-section">
@@ -547,6 +576,9 @@
   const MARKET_CACHE_KEY = "purevalue_market_cache_v1";
   // 週次自動更新で書き換わるリモートのdata.json。
   const REMOTE_DATA_URL = "https://raw.githubusercontent.com/ponta11185497-dot/pure-value-ledger/main/data.json";
+  // 新方式(商品単位・出典必須)の収集結果と、情報源ごとの収集ログ。
+  const REMOTE_PRODUCTS_URL = "https://raw.githubusercontent.com/ponta11185497-dot/pure-value-ledger/main/products.json";
+  const REMOTE_LOG_URL = "https://raw.githubusercontent.com/ponta11185497-dot/pure-value-ledger/main/collection_log.json";
   const STATUS_OPTIONS = ["未応募","応募済み","当選","落選"];
   const CATEGORIES = ["総合","トレカ","おもちゃ","スニーカー","アパレル","ウィスキー","その他"];
   const RANKING_TOP_CAP = 30;
@@ -589,6 +621,18 @@
     const cached = loadCachedMarketData();
     if(cached) return {data: cached, source:"cache"};
     return {data: loadEmbeddedMarketData(), source:"embedded"};
+  }
+
+  // products.json / collection_log.json はキャッシュなしの素直な取得でよい
+  // (無ければ空データとして扱う。オフライン時に古い情報を見せて誤判断させないため)。
+  async function loadRemoteJson(url, fallback){
+    try{
+      const res = await fetch(url, {cache:"no-store"});
+      if(res.ok) return await res.json();
+    }catch(e){
+      console.warn("fetch failed: " + url, e);
+    }
+    return fallback;
   }
 
   function defaultUserData(){
@@ -934,8 +978,87 @@
     });
   }
 
+  // ---------- Rendering: 新方式の収集結果(products.json) ----------
+  function fieldVal(f){ return f && typeof f === "object" ? f.value : f; }
+  function fieldSrc(f){ return f && typeof f === "object" ? f.source : null; }
+
+  function priceCellHtml(label, f){
+    const v = fieldVal(f);
+    const src = fieldSrc(f);
+    if(v === null || v === undefined) return '<div class="market-chip">'+label+": 未取得</div>";
+    const srcLabel = src ? escapeHtml(src.siteName||"") + "(" + (src.fetchedAt||"").slice(0,10) + ")" : "";
+    return '<div class="market-chip">'+label+": <b>"+fmtYen(v)+"</b>"+(srcLabel?' <span style="color:var(--text-faint);">'+srcLabel+"</span>":"")+"</div>";
+  }
+
+  function productCardHtml(p){
+    return '<div class="rank-card tier-b">' +
+      '<div class="rank-head">' +
+        '<div class="rank-info">' +
+          '<div class="name">'+escapeHtml(p.name)+"</div>" +
+          '<div class="meta"><span class="cat-chip">'+escapeHtml(p.status||"unknown")+'</span>' +
+            (p.model?"<span>型番: "+escapeHtml(p.model)+"</span>":"") +
+          "</div>" +
+        "</div>" +
+      "</div>" +
+      '<div class="rank-detail" style="display:block;">' +
+        '<div class="market-prices">' +
+          priceCellHtml("定価", p.definitivePrice) +
+          priceCellHtml("仕入れ可能価格", p.purchasePrice) +
+          priceCellHtml("買取価格", p.buybackPrice) +
+          priceCellHtml("直近成約価格", p.recentSoldPrice) +
+          priceCellHtml("予想売却価格", p.estimatedResalePrice) +
+        "</div>" +
+        '<div class="store-meta" style="margin-top:8px;"><b>公式リンク:</b> <a href="'+escapeHtml(p.officialUrl||"#")+'" target="_blank" rel="noopener">'+escapeHtml(p.officialUrl||"未取得")+"</a></div>" +
+        '<div class="store-meta"><b>最終確認:</b> '+escapeHtml((p.lastSeenAt||"-").slice(0,16).replace("T"," "))+"</div>" +
+      "</div>" +
+    "</div>";
+  }
+
+  function renderNewProducts(){
+    const items = productsData.items || [];
+    document.getElementById("newproducts-count").textContent = items.length ? "(" + items.length + "件)" : "";
+    const body = document.getElementById("newproducts-body");
+    body.innerHTML = items.length
+      ? items.map(productCardHtml).join("")
+      : '<div class="empty-note">まだ新方式での収集結果がありません(収集ワークフロー実行後にここへ表示されます)。</div>';
+  }
+
+  // ---------- Rendering: 情報源管理(collection_log.json) ----------
+  function renderCollectLog(){
+    const entries = collectLogData.entries || [];
+    document.getElementById("collectlog-count").textContent = entries.length ? "(" + entries.length + "件)" : "";
+    document.getElementById("collectlog-updated").textContent =
+      "最終実行: " + (collectLogData.lastRunAt ? collectLogData.lastRunAt.slice(0,16).replace("T"," ") : "-");
+
+    const body = document.getElementById("collectlog-body");
+    if(entries.length === 0){
+      body.innerHTML = '<div class="empty-note">まだ収集ログがありません。</div>';
+      return;
+    }
+    let html = '<table class="collectlog"><thead><tr>' +
+      '<th>情報源</th><th>方式</th><th>結果</th><th>取得件数</th><th>新規</th><th>失敗</th><th>最終取得</th><th>エラー内容</th>' +
+      '</tr></thead><tbody>';
+    entries.forEach(en=>{
+      const failed = en.resultType === "fetch_failed";
+      html += '<tr class="'+(failed?"log-failed":"")+'">' +
+        "<td>"+escapeHtml(en.siteName||en.sourceId)+"</td>" +
+        "<td>"+escapeHtml(en.collectMethod||"-")+"</td>" +
+        '<td><span class="log-pill '+escapeHtml(en.resultType||"")+'">'+escapeHtml(en.resultType||"-")+"</span></td>" +
+        "<td>"+(en.fetchedCount ?? "-")+"</td>" +
+        "<td>"+(en.newItemCount ?? "-")+"</td>" +
+        "<td>"+(en.failedCount ?? "-")+"</td>" +
+        "<td>"+escapeHtml((en.lastRunAt||"-").slice(0,16).replace("T"," "))+"</td>" +
+        "<td>"+escapeHtml(en.errorDetail||"")+"</td>" +
+        "</tr>";
+    });
+    html += "</tbody></table>";
+    body.innerHTML = html;
+  }
+
   // ---------- Init ----------
   let marketData = {generatedAt:null, items:[]};
+  let productsData = {generatedAt:null, items:[]};
+  let collectLogData = {lastRunAt:null, entries:[]};
   let userData = loadUserData();
 
   (async function init(){
@@ -952,6 +1075,11 @@
     renderRankingAndEnded();
     renderSources();
     setupSourceForm();
+
+    productsData = await loadRemoteJson(REMOTE_PRODUCTS_URL, {generatedAt:null, items:[]});
+    collectLogData = await loadRemoteJson(REMOTE_LOG_URL, {lastRunAt:null, entries:[]});
+    renderNewProducts();
+    renderCollectLog();
   })();
 })();
 </script>

@@ -51,5 +51,52 @@
 7. 前段のstepが失敗扱いになると後続stepがスキップされるため、pushステップには
    `if: always()` を付けておくと安全。
 
+## 2026-11-26: 目的の根本転換(ランキング→「今買える・プレ値になる商品の発見」)
+ユーザーから「過去のプレ値ランキングではなく、現在・今後定価以下で買える/応募できて
+転売利益+ANAマイルを狙える商品を発見する」ことが目的だと明確化され、収集・データ構造を
+作り替えた。設計方針はハイブリッド収集(API/RSS/構造化データ優先→専用パーサー→
+AI+WebFetch補完→AIはさらに新規情報源発見・商品照合・プレ値分析に使用)。
+AIが一般知識から商品を創作することは禁止、固定の監視サイト一覧から実在情報のみ収集する。
+
+### このセッションで実装したもの(収集基盤を最優先)
+- `products.json`(新スキーマ): 商品単位でJAN/型番/定価/仕入れ可能価格/買取価格/直近成約価格/
+  予想売却価格/手数料/送料/純利益/利益率/ANAマイル/各種日時/購入可否条件等を保持。
+  価格・日時フィールドは全て `{value, source:{siteName,url,fetchedAt}}` 形式で出典必須。
+  成約価格・買取価格・出品価格・予想価格は別フィールドで明確に区別。`priceHistory[]`で履歴蓄積。
+- `collection_log.json`(新規): 情報源ごとの最終取得日時・取得件数・新規件数・失敗件数・
+  エラー内容。0件を「商品が実在しない(empty_confirmed)」と「取得失敗(fetch_failed)」で区別。
+- `sources.json`: 各ソースに `collectMethod`(api/rss/structured/parser/ai-webfetch)と
+  `status`(active/candidate/broken)を追加。将来100〜300件への拡張に対応する構造。
+- `scripts/collect.js` + `scripts/lib/structured.js`(JSON-LD/schema.org Product抽出)+
+  `scripts/lib/rss.js`(RSS/Atom記事リンク抽出): AIを使わない決定的収集のオーケストレーター。
+  `collectMethod:"parser"` のソースは `scripts/parsers/<source.id>.js` があれば実行する仕組み
+  (専用パーサーは未実装・次の課題、下記参照)。処理できないものは `ai_queue.json` に積んで
+  後続のAIステップに渡す。
+- `.github/workflows/weekly-update.yml` を2段構成に再編: ①`node scripts/collect.js`(決定的)
+  →②claude-code-action(ai_queue.json内のサイトのみWebFetchで補完、新規情報源探索、商品照合・
+  プレ値分析)。AIプロンプトに「創作禁止・出典必須・価格種別を混同しない」を明記。
+  コミット対象を products.json/sources.json/collection_log.json に変更。
+- `プレ値台帳.html` に「収集結果(新方式)」「情報源管理(収集ログ)」セクションを追加
+  (既存の旧ランキングUI/data.jsonは一旦そのまま残し、新データを並行表示。8画面への
+  本格再編はUIより収集処理を優先するため今回は行っていない)。
+
+### 未完了・次にやるべきこと(重要)
+1. **専用パーサー(`scripts/parsers/`)が0件。** `collectMethod:"structured"`/`"parser"` に
+   設定済みのソースも現状ない(全39ソースが `ai-webfetch` のまま)。次のセッションでは
+   主要サイトのHTMLを実際に取得・確認したうえで、JSON-LD(schema.org Product)が使える
+   サイトには `collectMethod:"structured"` を設定し、それ以外で構造が安定しているサイトには
+   `scripts/parsers/<id>.js` を個別実装して、決定的収集の対象を広げること。
+   (このセッションではWebFetchでの事前確認がタイムアウト等で十分にできず、確実な実装を
+   優先して0件スタートにした。)
+2. `node scripts/collect.js` はローカルのNode未インストール環境では未実行・未検証。
+   GitHub Actions(ubuntu-latest + setup-node@v4, Node 20)上で初回実行して動作確認が必要。
+3. 旧 `data.json` / 旧ランキングUIは当面並存させている。新方式が安定したら、古い方式
+   (AIの一般知識寄りの収集)を終了し、画面を8構成(本日応募可能/本日締切/予約受付中/
+   今後の予約開始スケジュール/再販情報/応募済み管理/当選購入済み管理/売却済み利益集計)
+   へ再編する作業が残っている。
+4. `estimatedNetProfit`/`profitMarginPct`/`anaMiles` の自動計算ロジック(手数料率・送料の
+   前提値含む)はまだコード化していない。AIステップのプロンプトでは「算出できる場合のみ」
+   としているが、計算ルール自体をスクリプト側に実装した方が確実。
+
 ## 次にこのフォルダで作業を頼むときの言い方(例)
 「プレ値フォルダのSTATUS.mdを見て、続きから進めて」
