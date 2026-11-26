@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26",
+  "generatedAt": "2026-11-26T09:00:00Z",
   "schemaVersion": 1,
   "items": [
     {
@@ -115,7 +115,7 @@
         }
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
-      "lastSeenAt": "2026-11-26T07:00:00Z",
+      "lastSeenAt": "2026-11-26T09:00:00Z",
       "category": "トレカ"
     },
     {
@@ -3671,6 +3671,206 @@
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
       "category": "ウィスキー"
+    },
+    {
+      "id": "dbfw-fb12-reach-the-god-box",
+      "name": "ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック REACH THE GOD [FB12] 1BOX(24パック)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 5760,
+        "source": {
+          "siteName": "トレカマップ",
+          "url": "https://torecamap.co.jp/column/dbfwfb12/",
+          "fetchedAt": "2026-11-26T09:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://bandainamco-am.co.jp/official_shop/dbs-cardgame/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 5760,
+          "source": {
+            "siteName": "トレカマップ",
+            "url": "https://torecamap.co.jp/column/dbfwfb12/",
+            "fetchedAt": "2026-11-26T09:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T09:00:00Z",
+      "lastSeenAt": "2026-11-26T09:00:00Z",
+      "category": "トレカ"
+    },
+    {
+      "id": "onepiece-op18-dominance-of-god-box",
+      "name": "ONE PIECEカードゲーム ブースターパック 神の支配【OP-18】 1BOX(24パック)",
+      "model": null,
+      "jan": null,
+      "images": [],
+      "definitivePrice": {
+        "value": 5760,
+        "source": {
+          "siteName": "ゲームウィズ(検索結果)",
+          "url": "https://gamewith.jp/gaming-pc/587442",
+          "fetchedAt": "2026-11-26T09:00:00Z"
+        }
+      },
+      "purchasePrice": {
+        "value": null,
+        "source": null
+      },
+      "buybackPrice": {
+        "value": null,
+        "source": null
+      },
+      "recentSoldPrice": {
+        "value": null,
+        "source": null
+      },
+      "estimatedResalePrice": {
+        "value": null,
+        "source": null
+      },
+      "platformFee": {
+        "value": null,
+        "source": null
+      },
+      "shippingFee": {
+        "value": null,
+        "source": null
+      },
+      "estimatedNetProfit": {
+        "value": null,
+        "source": null
+      },
+      "profitMarginPct": {
+        "value": null,
+        "source": null
+      },
+      "anaMiles": {
+        "value": null,
+        "source": null
+      },
+      "reservationStart": {
+        "value": null,
+        "source": null
+      },
+      "applicationDeadline": {
+        "value": null,
+        "source": null
+      },
+      "winnerAnnounceDate": {
+        "value": null,
+        "source": null
+      },
+      "paymentDate": {
+        "value": null,
+        "source": null
+      },
+      "shipDate": {
+        "value": null,
+        "source": null
+      },
+      "purchasableQty": {
+        "value": null,
+        "source": null
+      },
+      "visaPayment": {
+        "value": null,
+        "source": null
+      },
+      "homeDelivery": {
+        "value": null,
+        "source": null
+      },
+      "officialUrl": "https://bandainamco-am.co.jp/official_shop/onepiece-cardgame/",
+      "status": "予約受付中",
+      "priceHistory": [
+        {
+          "date": "2026-11-26",
+          "field": "definitivePrice",
+          "value": 5760,
+          "source": {
+            "siteName": "ゲームウィズ(検索結果)",
+            "url": "https://gamewith.jp/gaming-pc/587442",
+            "fetchedAt": "2026-11-26T09:00:00Z"
+          }
+        }
+      ],
+      "firstSeenAt": "2026-11-26T09:00:00Z",
+      "lastSeenAt": "2026-11-26T09:00:00Z",
+      "category": "トレカ"
     }
   ]
 }

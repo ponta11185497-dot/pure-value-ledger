@@ -367,5 +367,23 @@
     "addedAt": "2026-11-26",
     "collectMethod": "ai-webfetch",
     "status": "candidate"
+  },
+  {
+    "id": "cand-41",
+    "type": "url",
+    "value": "https://tinpanblog.com/",
+    "note": "tinpanblog(ポケカ抽選まとめ)",
+    "addedAt": "2026-11-26",
+    "collectMethod": "ai-webfetch",
+    "status": "candidate"
+  },
+  {
+    "id": "cand-42",
+    "type": "url",
+    "value": "https://torecamap.co.jp/",
+    "note": "トレカマップ",
+    "addedAt": "2026-11-26",
+    "collectMethod": "ai-webfetch",
+    "status": "candidate"
   }
 ]
