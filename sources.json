@@ -430,60 +430,10 @@
     "role": "discovery"
   },
   {
-    "id": "buyback-cardrush-pokemon",
-    "type": "url",
-    "value": "https://cardrush.media/pokemon/buying_prices",
-    "note": "カードラッシュ ポケモンカード買取価格一覧",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-cardrush-onepiece",
-    "type": "url",
-    "value": "https://cardrush.media/onepiece/buying_prices",
-    "note": "カードラッシュ ONE PIECEカード買取価格一覧",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-cardrush-yugioh",
-    "type": "url",
-    "value": "https://cardrush.media/yugioh/buying_prices",
-    "note": "カードラッシュ 遊戯王買取価格一覧",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-cardrush-dragonball",
-    "type": "url",
-    "value": "https://cardrush.media/dragonball/buying_prices",
-    "note": "カードラッシュ ドラゴンボールカード買取価格一覧",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-rushmedia-wixoss",
-    "type": "url",
-    "value": "https://cardrush.media/",
-    "note": "ラッシュメディア トップ(各TCG買取価格一覧への入口)",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
     "id": "buyback-netoff-figure",
     "type": "url",
-    "value": "https://www.netoff.co.jp/kaitori/figure/",
-    "note": "ネットオフ フィギュア買取価格",
+    "value": "https://www.netoff.co.jp/figure/purchase/",
+    "note": "ネットオフ(もえたく!) フィギュア買取価格一覧",
     "role": "buyback",
     "collectMethod": "ai-webfetch",
     "status": "active",
@@ -492,38 +442,8 @@
   {
     "id": "buyback-netoff-game",
     "type": "url",
-    "value": "https://www.netoff.co.jp/kaitori/game/",
-    "note": "ネットオフ ゲーム買取価格",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-snkrdunk-ranking",
-    "type": "url",
-    "value": "https://snkrdunk.com/sell/ranking",
-    "note": "スニーカーダンク 買取/販売ランキング(スニーカー)",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-rudeya-whisky",
-    "type": "url",
-    "value": "https://liquor-rudeya.com/",
-    "note": "買取ルデヤ ウイスキー買取価格",
-    "role": "buyback",
-    "collectMethod": "ai-webfetch",
-    "status": "active",
-    "addedAt": "2026-11-26"
-  },
-  {
-    "id": "buyback-2ndstreet-toy",
-    "type": "url",
-    "value": "https://www.2ndstreet.jp/kaitori-guide/toy",
-    "note": "セカンドストリート おもちゃ/プラモデル買取価格",
+    "value": "https://www.netoff.co.jp/sellcont/nid/PurchaseList/cid/5001/",
+    "note": "ネットオフ ゲーム買取価格一覧",
     "role": "buyback",
     "collectMethod": "ai-webfetch",
     "status": "active",
@@ -534,6 +454,46 @@
     "type": "url",
     "value": "https://kaitori-watch.jp/",
     "note": "買取相場比較まとめ(複数業者横断)",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-pricebase-pokemon-box",
+    "type": "url",
+    "value": "https://price-base.com/useful/pokacabox-kaitorilist",
+    "note": "PRICE BASE ポケモンカードBOX買取価格一覧(第三者集計)",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-altema-pokemon-kougaku",
+    "type": "url",
+    "value": "https://altema.jp/pokemoncard/pokecakougaku",
+    "note": "ポケカチ ポケモンカード高額買取ランキング",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-torecamap-box",
+    "type": "url",
+    "value": "https://torecamap.co.jp/column/pokeca-box-kaitori/",
+    "note": "トレカマップ ポケカBOX買取価格まとめ",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-netoff-sneaker",
+    "type": "url",
+    "value": "https://www.netoff.co.jp/figure/purchase/?ky=%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC",
+    "note": "ネットオフ スニーカー買取価格一覧",
     "role": "buyback",
     "collectMethod": "ai-webfetch",
     "status": "active",

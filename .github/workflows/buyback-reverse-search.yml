@@ -30,7 +30,6 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: '--allowedTools WebSearch,WebFetch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 200'
-          show_full_output: true
           prompt: |
             あなたは「買取価格を起点にした逆引き検索」を行うエージェントです。
             既存の `weekly-update.yml`(抽選・予約・再販の新商品発見)や `market-research.yml`
