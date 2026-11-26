@@ -73,7 +73,7 @@ function upsertProductFromStructured(products, source, rawItem) {
       purchasePrice: field(rawItem.price, srcRef),
       buybackPrice: field(null, null),
       recentSoldPrice: field(null, null),
-      estimatedResalePrice: field(null, null),
+      estimatedResalePrice: Object.assign(field(null, null), { confidence: null }),
       platformFee: field(null, null),
       shippingFee: field(null, null),
       estimatedNetProfit: field(null, null),
@@ -92,6 +92,7 @@ function upsertProductFromStructured(products, source, rawItem) {
       priceHistory: [],
       firstSeenAt: nowIso(),
       lastSeenAt: nowIso(),
+      resaleResearch: { lastAttemptAt: null, status: "not_attempted", note: null },
     };
     products.items.push(product);
   } else {

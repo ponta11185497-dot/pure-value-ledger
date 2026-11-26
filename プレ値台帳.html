@@ -234,6 +234,7 @@
   <section id="newproducts-section">
     <h2 class="section-title">収集結果(新方式) <span class="count" id="newproducts-count"></span></h2>
     <div class="cap-note">固定の監視サイト一覧から実際に取得できた商品のみを表示します(AIの一般知識による商品リスト生成は行いません)。</div>
+    <div class="cap-note" id="newproducts-profit-note"></div>
     <div id="newproducts-body"></div>
   </section>
 
@@ -1015,13 +1016,29 @@
         "</div>" +
         '<div class="store-meta" style="margin-top:8px;"><b>公式リンク:</b> <a href="'+escapeHtml(p.officialUrl||"#")+'" target="_blank" rel="noopener">'+escapeHtml(p.officialUrl||"未取得")+"</a></div>" +
         '<div class="store-meta"><b>最終確認:</b> '+escapeHtml((p.lastSeenAt||"-").slice(0,16).replace("T"," "))+"</div>" +
+        resaleResearchHtml(p.resaleResearch) +
       "</div>" +
     "</div>";
+  }
+
+  function resaleResearchHtml(rr){
+    if(!rr || !rr.status || rr.status === "not_attempted") return "";
+    const label = rr.status === "found" ? "相場調査: 確認できた"
+      : rr.status === "not_found" ? "相場調査: 見つからなかった"
+      : rr.status === "fetch_failed" ? "相場調査: 取得失敗"
+      : rr.status;
+    const cls = rr.status === "found" ? "ok" : rr.status === "fetch_failed" ? "fetch_failed" : "empty_confirmed";
+    return '<div class="store-meta"><span class="log-pill '+cls+'">'+escapeHtml(label)+"</span> " +
+      escapeHtml(rr.note||"") + (rr.lastAttemptAt?' <span style="color:var(--text-faint);">('+escapeHtml(rr.lastAttemptAt.slice(0,16).replace("T"," "))+")</span>":"") +
+      "</div>";
   }
 
   function renderNewProducts(){
     const items = productsData.items || [];
     document.getElementById("newproducts-count").textContent = items.length ? "(" + items.length + "件)" : "";
+    const profitCount = items.filter(p=>fieldVal(p.estimatedNetProfit) !== null && fieldVal(p.estimatedNetProfit) !== undefined).length;
+    const profitNoteEl = document.getElementById("newproducts-profit-note");
+    if(profitNoteEl) profitNoteEl.textContent = profitCount ? "うち利益計算が成立した商品: " + profitCount + "件" : "利益計算が成立した商品はまだありません(仕入れ価格と売却価格の両方が確認できた商品のみ計算されます)。";
     const body = document.getElementById("newproducts-body");
     body.innerHTML = items.length
       ? items.map(productCardHtml).join("")

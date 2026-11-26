@@ -1,0 +1,127 @@
+name: Market Research Update
+
+on:
+  schedule:
+    # 毎週火・金 1:00 UTC = 火・金 10:00 JST(商品収集ワークフローとは別のターン予算で実行し、
+    # 片方のターン不足でもう片方が未処理になる事態を避ける)。
+    - cron: '0 1 * * 2,5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  market-research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # このワークフローは「新商品の発見」(weekly-update.yml の役割)は一切行わない。
+      # 既存の products.json の商品について、仕入れ価格・売却可能価格(買取/成約)の調査と
+      # 購入可否の再確認だけに専念する。新商品探索とターン予算を分離することで、
+      # どちらかがターン不足で未処理になる事態を防ぐ。
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--allowedTools WebSearch,WebFetch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 250'
+          prompt: |
+            あなたは `products.json` に既に登録済みの商品について、相場調査と購入可否の
+            再確認だけを行うエージェントです。**新商品の発見・追加は一切行わないこと**
+            (それは別のワークフロー `weekly-update.yml` の役割で、ターン予算も別です)。
+
+            ## 絶対に守ること(最重要)
+            1. 一般知識からの価格・日付の創作は絶対禁止。WebFetch/WebSearchで実際に確認できた
+               値のみを使用する。確認できない項目は null のままにし、創作で埋めないこと。
+            2. **出品価格(まだ売れていない、売り手が付けている希望価格)と成約価格(実際に
+               売買が成立した価格)を混同しないこと。** メルカリ/スニーカーダンク/ヤフオクでは
+               「販売中」ではなく「売却済み/落札済み」の実績のみを `recentSoldPrice` に入れる。
+               販売中の出品価格しか見つからない場合は `recentSoldPrice` には入れず、
+               どうしても参考値として残したい場合のみ `estimatedResalePrice` に
+               confidence(下記)を "estimated" にして入れる。
+            3. 専門買取業者(駿河屋、カードラッシュ、らしんばん、ネットオフ、買取ルデヤ等
+               ジャンルに応じた専門業者)の買取価格は `buybackPrice` に、成約価格は
+               `recentSoldPrice` に、それぞれ明確に分けて入れる。
+            4. 発売前(まだ発売していない・相場実績がない)商品は、同シリーズ・同カテゴリの
+               過去の類似商品の初動相場を参考にしてよいが、必ず `estimatedResalePrice` に
+               confidence "estimated" として入れ、`source.siteName` に
+               「推定(類似商品Xの初動相場を参考)」等、推定根拠を明記すること。
+               confirmed実績と推定値を絶対に混同しないこと。
+            5. 商品の照合は JAN コード → 型番 → 正式商品名の優先順で行い、別商品を
+               誤って同一視しないこと。
+            6. **この実行は1回で完結させること。** サブエージェント/バックグラウンドタスクは
+               使わず、同期的に全商品を調査し終えてから products.json への書き込みを
+               完了させること。
+            7. **全商品を1周することを深掘りより優先すること。** products.json の商品数が
+               多い場合、1商品あたりの調査(WebSearch/WebFetch)は目安2〜3回までに留め、
+               それ以上かかりそうな商品は「not_found」として次回に回し、必ず最後の商品まで
+               到達すること(ターン不足で後半の商品が完全に未処理になることを避ける)。
+
+            ## products.json のスキーマ(今回関係する部分)
+            各商品は既に以下の形を持っている:
+            ```
+            {
+              "id", "name", "model", "jan", "officialUrl", "status",
+              "purchasePrice": {"value", "source"},
+              "buybackPrice": {"value", "source"},
+              "recentSoldPrice": {"value", "source"},
+              "estimatedResalePrice": {"value", "source", "confidence"},
+              "reservationStart", "applicationDeadline", ... (日時フィールド群),
+              "purchasableQty", "visaPayment", "homeDelivery",
+              "priceHistory": [...],
+              "resaleResearch": {"lastAttemptAt", "status", "note"}  // ない場合は今回追加する
+            }
+            ```
+            `source` は常に `{"siteName", "url", "fetchedAt"}`(fetchedAtは今回の実行日時)。
+            `estimatedResalePrice` にはさらに `confidence: "confirmed"|"estimated"` を
+            必ず設定すること(確定実績に基づく場合のみ "confirmed"、類似商品からの推定は
+            "estimated")。
+
+            ## やること(products.json の items を1件ずつ、全件処理する)
+            1. 各商品について、JAN/型番/正式名で専門買取業者の買取価格ページを検索・確認し、
+               見つかれば `buybackPrice` を更新する。
+            2. メルカリ/スニーカーダンク/ヤフオク等で「売却済み・落札済み」の実績を検索し、
+               見つかれば `recentSoldPrice` を更新する(出品中価格は使わない)。
+            3. まだ発売・流通していない商品は、類似の過去商品の初動相場を参考に
+               `estimatedResalePrice`(confidence:"estimated")を設定してよい。
+            4. 送料・販売手数料が商品ページや買取業者ページで確認できれば `shippingFee` /
+               `platformFee` を更新する(確認できない場合は書き込まない。デフォルト値は
+               この後の `computeFinancials.js` が補う)。
+            5. `officialUrl` を再確認(WebFetch)し、現在も購入・予約・抽選応募が可能かを
+               確認する。受付終了していたら `status` を更新し、可能な数量・VISA決済可否・
+               自宅配送可否が明記されていれば `purchasableQty`/`visaPayment`/`homeDelivery`
+               も更新する。
+            6. 調査結果を `resaleResearch` に記録する:
+               - 買取/成約価格のいずれかが見つかった → `{"status":"found", "lastAttemptAt":今回, "note":"何が見つかったか"}`
+               - 調査したが見つからなかった → `{"status":"not_found", "lastAttemptAt":今回, "note":"理由"}`
+               - ページ自体が取得できない(403/タイムアウト等) → `{"status":"fetch_failed", "lastAttemptAt":今回, "note":"エラー内容"}`
+            7. 値を更新した場合は `priceHistory` に追記する(上書き削除しない)。
+            8. **estimatedNetProfit / profitMarginPct / anaMiles はあなたが書き込まないこと。**
+               この後のステップで `computeFinancials.js` が自動計算する。
+
+            `sources.json`、`collection_log.json`、`ai_queue.json`、`プレ値台帳.html`、
+            ワークフローファイル自体、`scripts/` 配下のコードは変更しないこと。
+            対象は `products.json` の既存アイテムの調査・更新のみです。新しい商品(新しい id)
+            を追加しないこと。
+
+      - name: Compute profit / margin / ANA miles
+        run: node scripts/computeFinancials.js
+
+      - name: Configure git and push
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          if [ -n "$(git status --porcelain products.json)" ]; then
+            git add products.json
+            git commit -m "Market research update $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to products.json"
+          fi
