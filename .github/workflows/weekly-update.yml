@@ -30,7 +30,7 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          claude_args: '--allowedTools WebSearch,WebFetch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 100'
+          claude_args: '--allowedTools WebSearch,WebFetch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 180'
           prompt: |
             あなたはこのリポジトリの products.json / collection_log.json / sources.json を
             更新するエージェントです。以下の手順に厳密に従ってください。
@@ -87,19 +87,29 @@ jobs:
             (fetchedAt は今回の実行日時)。値を更新した場合は priceHistory に追記すること。
 
             ## やること(同期的に、この1回の実行内で完結させる)
-            1. `ai_queue.json` の各エントリを順にWebFetchし、実在するページの内容から具体的な商品
-               (型番・JAN等の単位で個体識別できるもの)を抽出し、products.json に反映する。
-               既存商品と同一と判断できる場合は新規作成せず既存アイテムを更新すること。
+            1. **最優先: `ai_queue.json` に積まれている全エントリ(通常39件前後)を、必ず
+               少なくとも1回は実際にWebFetch/WebSearchすること。** 1件あたりの深追いよりも
+               全件を一周することを優先してください(応募可能な商品を取りこぼさないことが
+               このシステムの最優先事項です)。目安として、ソース数が多い場合は1ソースあたりの
+               追加調査(個別記事への深掘り)は多くても2〜3件までに留め、それ以上必要な場合は
+               今回は見出し情報だけで判断するか、未確認のまま次回に回してください。
+               実在するページの内容から具体的な商品(型番・JAN等の単位で個体識別できるもの)を
+               抽出し、products.json に反映する。既存商品と同一と判断できる場合は新規作成せず
+               既存アイテムを更新すること。
                - まとめ記事・一覧ページ(例: トレチュー、ガンプラ予約速報等)で見出しだけ
-                 価格や当選発表日が分からない場合は、そのまとめ記事内の個別記事/個別商品ページの
-                 リンクを**可能な範囲で複数件(目安5〜10件)実際にWebFetchして**具体的な価格・
-                 日時を確認してから登録すること。一覧ページだけ見て諦めないこと。
+                 価格や当選発表日が分からない場合、時間に余裕があれば個別記事/個別商品ページを
+                 2〜3件WebFetchして確認してから登録する。時間がなければ `empty_confirmed` として
+                 記録し、次回以降の深掘り対象にする(全件一周を優先するため)。
                - `type: "x"`(Xアカウント)のソースは `https://x.com/...` を直接WebFetchしても
                  ブロックされるため、代わりにWebSearchで `@アカウント名` や該当ブランド名+
                  「抽選」「予約」等のキーワードで検索し、ヒットした一次情報(公式サイト・
-                 公式リリース)のページをWebFetchして内容を確認すること。
+                 公式リリース)のページをWebFetchして内容を確認すること。WebSearchでも
+                 何も見つからなければ `fetch_failed` として理由を記録してよい。
                - HTTP 403やタイムアウトで取得できないサイトは、User-Agent偽装や認証回避など
                  利用規約に反する手段で突破しようとしないこと。失敗として記録してよい。
+               - `ai_queue.json` の件数が多く全件処理に時間がかかりすぎると判断した場合は、
+                 深掘りを一切せず見出し情報の確認のみで次のソースに進み、必ず最後のソースまで
+                 到達してから products.json / collection_log.json への書き込みに移ること。
             2. `sources.json` に未登録の新しい監視サイト候補をWebSearchで探し、見つかった場合は
                `sources.json` に `status: "candidate"`, `collectMethod: "ai-webfetch"` として追加する
                (まだ `active` にはしない。候補が多すぎる場合は特に有望なもの数件まででよい)。
