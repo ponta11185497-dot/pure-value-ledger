@@ -6,7 +6,8 @@
     "note": "ポケモンセンターオンライン",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-2",
@@ -15,7 +16,8 @@
     "note": "プレミアムバンダイ",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-3",
@@ -24,7 +26,8 @@
     "note": "サントリー ウイスキー",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-4",
@@ -33,7 +36,8 @@
     "note": "ロレックス正規店一覧",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-5",
@@ -42,7 +46,8 @@
     "note": "マイニンテンドーストア",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-6",
@@ -51,7 +56,8 @@
     "note": "Nike SNKRS",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-7",
@@ -60,7 +66,8 @@
     "note": "一番くじONLINE",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-8",
@@ -69,7 +76,8 @@
     "note": "駿河屋トレカ公式",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "seed-9",
@@ -78,7 +86,8 @@
     "note": "ヨドバシ公式",
     "addedAt": "2026-09-17",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1789677187858-96obs",
@@ -87,7 +96,8 @@
     "note": "",
     "addedAt": "2026-09-18",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1789677267738-fibq3",
@@ -96,7 +106,8 @@
     "note": "",
     "addedAt": "2026-09-18",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1789677315270-u9m1b",
@@ -105,7 +116,8 @@
     "note": "",
     "addedAt": "2026-09-18",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1789677337666-uiz37",
@@ -114,7 +126,8 @@
     "note": "",
     "addedAt": "2026-09-18",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030113-gker0",
@@ -123,7 +136,8 @@
     "note": "ポケモンカード公式",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030114-6a8km",
@@ -132,7 +146,8 @@
     "note": "遊戯王カードゲーム公式",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030115-8t9vh",
@@ -141,7 +156,8 @@
     "note": "ONE PIECEカードゲーム公式ショップ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030116-k2muc",
@@ -150,7 +166,8 @@
     "note": "ドラゴンボールカード公式ショップ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030117-9xzfu",
@@ -159,7 +176,8 @@
     "note": "ヴァイスシュヴァルツ公式ストア",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030118-juy1e",
@@ -168,7 +186,8 @@
     "note": "トレチュー(ポケカ・ワンピ・遊戯王横断まとめ)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030119-5o06m",
@@ -177,7 +196,8 @@
     "note": "人気トレカゲットナビ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030120-yealj",
@@ -186,7 +206,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030121-ilmk1",
@@ -195,7 +216,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030122-c8bvj",
@@ -204,7 +226,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030123-2kdls",
@@ -213,7 +236,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030124-byzh8",
@@ -222,7 +246,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030125-2dieb",
@@ -231,7 +256,8 @@
     "note": "",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030126-98qp1",
@@ -240,7 +266,8 @@
     "note": "タカラトミーモール公式(トミカ限定品)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030127-9o47z",
@@ -249,7 +276,8 @@
     "note": "プレバン予約速報(ガンプラ専門まとめ)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030128-nbze2",
@@ -258,7 +286,8 @@
     "note": "グッドスマイルカンパニー公式ショップ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030129-zlrng",
@@ -267,7 +296,8 @@
     "note": "カホタン(新作予約情報)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030130-iy2p4",
@@ -276,7 +306,8 @@
     "note": "グルメWatch(イオン等の山崎・白州・響抽選速報)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030131-8rkuv",
@@ -285,7 +316,8 @@
     "note": "ニッカウヰスキー公式",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030132-om2q8",
@@ -294,7 +326,8 @@
     "note": "ノリフネ(日本ウイスキー購入方法まとめ)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030133-sf7rn",
@@ -303,7 +336,8 @@
     "note": "申込可能なウイスキー抽選まとめ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030134-713dg",
@@ -312,7 +346,8 @@
     "note": "高島屋(アプリ限定抽選あり)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030135-h1zby",
@@ -321,7 +356,8 @@
     "note": "Supreme公式(日本)",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030136-tgsam",
@@ -330,7 +366,8 @@
     "note": "Supreme等のWeb抽選応募方法・締切解説",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030137-5w1a7",
@@ -339,7 +376,8 @@
     "note": "Supreme等の抽選開催を速報",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "s-1790029030138-jfvgr",
@@ -348,7 +386,8 @@
     "note": "adidas公式CONFIRMEDアプリ案内ページ",
     "addedAt": "2026-09-22",
     "collectMethod": "ai-webfetch",
-    "status": "active"
+    "status": "active",
+    "role": "discovery"
   },
   {
     "id": "cand-torecamap",
@@ -357,7 +396,8 @@
     "note": "トレカマップ(ポケカ抽選情報まとめ。WebSearchで発見・未取得確認)",
     "addedAt": "2026-11-26",
     "collectMethod": "ai-webfetch",
-    "status": "candidate"
+    "status": "candidate",
+    "role": "discovery"
   },
   {
     "id": "cand-altema",
@@ -366,7 +406,8 @@
     "note": "アルテマ ポケカ抽選・予約まとめ(WebSearchで発見・記事内日付が古い可能性、未取得確認)",
     "addedAt": "2026-11-26",
     "collectMethod": "ai-webfetch",
-    "status": "candidate"
+    "status": "candidate",
+    "role": "discovery"
   },
   {
     "id": "cand-41",
@@ -375,7 +416,8 @@
     "note": "tinpanblog(ポケカ抽選まとめ)",
     "addedAt": "2026-11-26",
     "collectMethod": "ai-webfetch",
-    "status": "candidate"
+    "status": "candidate",
+    "role": "discovery"
   },
   {
     "id": "cand-42",
@@ -384,6 +426,117 @@
     "note": "トレカマップ",
     "addedAt": "2026-11-26",
     "collectMethod": "ai-webfetch",
-    "status": "candidate"
+    "status": "candidate",
+    "role": "discovery"
+  },
+  {
+    "id": "buyback-cardrush-pokemon",
+    "type": "url",
+    "value": "https://cardrush.media/pokemon/buying_prices",
+    "note": "カードラッシュ ポケモンカード買取価格一覧",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-cardrush-onepiece",
+    "type": "url",
+    "value": "https://cardrush.media/onepiece/buying_prices",
+    "note": "カードラッシュ ONE PIECEカード買取価格一覧",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-cardrush-yugioh",
+    "type": "url",
+    "value": "https://cardrush.media/yugioh/buying_prices",
+    "note": "カードラッシュ 遊戯王買取価格一覧",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-cardrush-dragonball",
+    "type": "url",
+    "value": "https://cardrush.media/dragonball/buying_prices",
+    "note": "カードラッシュ ドラゴンボールカード買取価格一覧",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-rushmedia-wixoss",
+    "type": "url",
+    "value": "https://cardrush.media/",
+    "note": "ラッシュメディア トップ(各TCG買取価格一覧への入口)",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-netoff-figure",
+    "type": "url",
+    "value": "https://www.netoff.co.jp/kaitori/figure/",
+    "note": "ネットオフ フィギュア買取価格",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-netoff-game",
+    "type": "url",
+    "value": "https://www.netoff.co.jp/kaitori/game/",
+    "note": "ネットオフ ゲーム買取価格",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-snkrdunk-ranking",
+    "type": "url",
+    "value": "https://snkrdunk.com/sell/ranking",
+    "note": "スニーカーダンク 買取/販売ランキング(スニーカー)",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-rudeya-whisky",
+    "type": "url",
+    "value": "https://liquor-rudeya.com/",
+    "note": "買取ルデヤ ウイスキー買取価格",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-2ndstreet-toy",
+    "type": "url",
+    "value": "https://www.2ndstreet.jp/kaitori-guide/toy",
+    "note": "セカンドストリート おもちゃ/プラモデル買取価格",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
+  },
+  {
+    "id": "buyback-rakuma-kaitori",
+    "type": "url",
+    "value": "https://kaitori-watch.jp/",
+    "note": "買取相場比較まとめ(複数業者横断)",
+    "role": "buyback",
+    "collectMethod": "ai-webfetch",
+    "status": "active",
+    "addedAt": "2026-11-26"
   }
 ]

@@ -93,6 +93,7 @@ function upsertProductFromStructured(products, source, rawItem) {
       firstSeenAt: nowIso(),
       lastSeenAt: nowIso(),
       resaleResearch: { lastAttemptAt: null, status: "not_attempted", note: null },
+      discoverySource: "listing-first",
     };
     products.items.push(product);
   } else {

@@ -997,6 +997,7 @@
         '<div class="rank-info">' +
           '<div class="name">'+escapeHtml(p.name)+"</div>" +
           '<div class="meta"><span class="cat-chip">'+escapeHtml(p.status||"unknown")+'</span>' +
+            (p.discoverySource==="buyback-first"?'<span class="cat-chip" style="background:var(--orange-soft);color:var(--orange);">買取起点</span>':"") +
             (p.model?"<span>型番: "+escapeHtml(p.model)+"</span>":"") +
           "</div>" +
         "</div>" +

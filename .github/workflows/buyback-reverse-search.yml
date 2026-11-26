@@ -1,0 +1,127 @@
+name: Buyback Reverse Search
+
+on:
+  schedule:
+    # 毎日 2:00 UTC = 11:00 JST。他の2ワークフロー(新商品発見/相場調査)とは時間帯を分け、
+    # 同じサイトへの同時アクセスを避ける。各ソースの利用規約・取得制限の範囲内で
+    # 1日1回の軽い巡回に留める(ページ全体のスクレイピングではなく上位数件の確認のみ)。
+    - cron: '0 2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  buyback-reverse-search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 既存の「販売情報→相場調査」とは逆方向の収集。
+      # 買取業者側の高価買取情報を起点に、その商品を今まさに安く仕入れられる通販サイトを
+      # 逆引きで探す。プレミア価格商品だけに限定せず、利益率が低くても高額決済・資金回転の
+      # 速い商品も対象にする。
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--allowedTools WebSearch,WebFetch,Read,Write,Edit --disallowedTools Agent,ScheduleWakeup --max-turns 200'
+          prompt: |
+            あなたは「買取価格を起点にした逆引き検索」を行うエージェントです。
+            既存の `weekly-update.yml`(抽選・予約・再販の新商品発見)や `market-research.yml`
+            (既存商品の相場調査)とは別役割です。それらが行っている処理はここでは行わず、
+            **買取価格起点の新規発見のみ**に専念してください。
+
+            ## このワークフローの考え方
+            1. `sources.json` の `role:"buyback"` のソース(買取業者・買取ランキングサイト)から、
+               商品名・JAN/型番・買取価格を取得する。
+            2. その商品を現在販売している通販サイト(メーカー公式通販、Amazon、楽天市場、
+               Yahoo!ショッピング等)を検索し、販売価格・在庫有無・予約割引・購入可能数量を確認する。
+            3. VISAカードでの決済が可能か確認する(通常のクレジットカード対応表記で判断可。
+               確認できなければ null のままにする)。
+            4. 仕入れ価格(購入可能価格)と買取価格の差額から、送料・手数料を差し引いた
+               純利益を計算できるよう products.json に値を記録する(実際の計算は後段の
+               computeFinancials.js が行うので、あなたは purchasePrice と buybackPrice を
+               埋めることに専念する)。
+
+            ## 絶対に守ること
+            1. 一般知識からの価格・数値の創作は禁止。実際にWebFetch/WebSearchで確認した値のみ使う。
+               確認できない項目は null のままにする。
+            2. **プレミア価格(非常に高額・激レア)の商品だけに限定しないこと。** 利益率が低くても、
+               仕入れ価格(決済額)が高額で、在庫があり即座に仕入れられ、買取側も即現金化できる
+               (資金回転が速い)商品を重視して選んでよい。
+            3. **確定買取価格(`buybackPrice`、買取業者が明示した金額)と将来の予想売却価格
+               (`estimatedResalePrice`、confidence:"estimated")は絶対に分離すること。**
+               買取業者の「買取価格」はほぼ確定値として `buybackPrice` の confidence扱いで
+               問題ないが、まとめサイトの「推定buyback」等、複数店舗の平均や予想値は
+               `estimatedResalePrice` + confidence:"estimated" にすること。
+            4. **`officialUrl` には必ず実際の購入ページ(メーカー直販・Amazon商品ページ・
+               楽天/Yahoo!ショッピングの商品ページ等)のURLを入れること。** 買取ランキングサイトや
+               まとめサイトのURLを `officialUrl` には絶対に入れないこと(それらは
+               各フィールドの `source.url` として使うのは可)。「販売情報サイト(まとめ・比較)」と
+               「実際に購入できるページ」を明確に区別すること。
+            5. **1つの買取業者ソース・1つのメーカー/ブランドから新規追加する商品は、
+               1回の実行あたり最大3件程度までに留め、複数のジャンル(トレカ複数タイトル、
+               フィギュア、ウイスキー、スニーカー、ゲーム機等)から幅広く選ぶこと。**
+               プレミアムバンダイや特定メーカーに偏らせないこと(既存のproducts.jsonが
+               特定メーカーに偏っている反省から)。
+            6. 新しい商品の `id` は `buyback-<スラッグ>` 形式にし、既存商品と重複するもの
+               (同じJAN/型番/商品名)は新規作成せず既存アイテムを更新すること。
+               新規追加した商品には `"discoverySource": "buyback-first"` を設定すること
+               (既存商品にある場合は `"listing-first"`。無ければ省略可)。
+            7. **この実行は1回で完結させること。** サブエージェント/バックグラウンドタスクは使わず
+               同期的に処理し、この実行内で products.json への書き込みまで終えること。
+            8. **全ソース・全候補を1周することを深掘りより優先すること。** WebSearchには
+               1回の実行内で回数制限があるため、上限に達したら無理に続けず、未処理分は
+               次回に回してよい(どのソースをどこまで処理したかは、各商品を見れば分かるので
+               特別なキューファイルは不要)。
+            9. **estimatedNetProfit / profitMarginPct / anaMiles はあなたが書き込まないこと。**
+               後段の `computeFinancials.js` が自動計算する。
+
+            ## products.json のスキーマ(既存と同じ。新規フィールドのみ補足)
+            ```
+            {
+              ...(既存フィールドは market-research.yml と同じ構造)...
+              "discoverySource": "buyback-first" | "listing-first" | null
+            }
+            ```
+
+            ## やること
+            1. `sources.json` を読み、`role:"buyback"` のソースを確認する。
+            2. 各ソースから、現在も通販で購入できそうな(=まだ流通している・廃盤になっていない)
+               商品を中心に、買取価格が高い順に候補をいくつか確認する
+               (大昔の廃盤レアカード1枚単位より、BOX/セット商品や現行流通品を優先)。
+            3. 候補ごとに、販売中の通販ページをWebSearch/WebFetchで探し、販売価格・在庫・
+               予約割引・購入可能数量・VISA決済可否を確認する。見つからなければ
+               その候補は products.json に追加せず次へ進む(創作しない)。
+            4. 購入ページと買取価格の両方が確認できた候補のみ products.json に反映する。
+            5. 既存アイテムと重複する場合は、新規作成せず既存アイテムの buybackPrice 等を更新する。
+            6. 変更後、products.json が有効なJSONであることを自分で確認する。
+               (git操作は後段のステップが自動で行う。あなたはファイル編集のみでよい。)
+
+            `sources.json`、`collection_log.json`、`ai_queue.json`、`プレ値台帳.html`、
+            ワークフローファイル自体、`scripts/` 配下のコードは変更しないこと。
+            対象は `products.json` のみです。
+
+      - name: Compute profit / margin / ANA miles
+        run: node scripts/computeFinancials.js
+
+      - name: Configure git and push
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          if [ -n "$(git status --porcelain products.json)" ]; then
+            git add products.json
+            git commit -m "Buyback reverse search update $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to products.json"
+          fi
