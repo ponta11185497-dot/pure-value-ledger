@@ -175,7 +175,7 @@
         "source": {
           "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
           "url": null,
-          "fetchedAt": "2026-11-26T05:51:10.871Z"
+          "fetchedAt": "2026-11-26T05:53:17.163Z"
         }
       },
       "profitMarginPct": {
@@ -183,7 +183,7 @@
         "source": {
           "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
           "url": null,
-          "fetchedAt": "2026-11-26T05:51:10.871Z"
+          "fetchedAt": "2026-11-26T05:53:17.163Z"
         }
       },
       "anaMiles": {
