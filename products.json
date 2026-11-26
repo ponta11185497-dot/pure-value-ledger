@@ -116,7 +116,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T09:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "2026-11-27発売前(PRICE BASEで買取価格未掲載、定価6,000円)。類似商品の初動相場の根拠となる確認済み値がないため推定値は設定せず"
+      }
     },
     {
       "id": "pokemoncard-storm-emeralda-box",
@@ -228,7 +233,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "pokemoncard-30th-celebration-premium-deck-set-eevee-umbreon",
@@ -321,7 +331,12 @@
       "priceHistory": [],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "pokemoncard-starter-set-ex-aeon",
@@ -410,7 +425,12 @@
       "priceHistory": [],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "suntory-hibiki-japanese-harmony-amazon",
@@ -514,7 +534,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "ウィスキー"
+      "category": "ウィスキー",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索で見つかった買取査定は2020年の古いもの(最高6,500円)で現在の相場として採用せず。成約実績の日付付き確認はできなかった"
+      }
     },
     {
       "id": "travisscott-nike-af1-07-low-rs-white",
@@ -622,7 +647,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "スニーカー"
+      "category": "スニーカー",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "Rockstar Games × Travis Scott AF1 Lowの買取/落札実績は検索で確認できず"
+      }
     },
     {
       "id": "travisscott-nike-af1-07-low-rs-black",
@@ -730,7 +760,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "スニーカー"
+      "category": "スニーカー",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "Rockstar Games × Travis Scott AF1 Lowの買取/落札実績は検索で確認できず"
+      }
     },
     {
       "id": "pbandai-1000260835",
@@ -834,7 +869,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260744",
@@ -938,7 +978,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260742",
@@ -1042,7 +1087,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260741",
@@ -1146,7 +1196,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260737",
@@ -1250,7 +1305,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260719",
@@ -1354,7 +1414,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260718",
@@ -1458,7 +1523,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000259097",
@@ -1562,7 +1632,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000259090",
@@ -1666,7 +1741,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000258907",
@@ -1770,7 +1850,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000258905",
@@ -1874,7 +1959,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000258903",
@@ -1978,7 +2068,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000258900",
@@ -2082,7 +2177,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000258897",
@@ -2186,7 +2286,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000255655",
@@ -2290,7 +2395,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000255638",
@@ -2394,7 +2504,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000254424",
@@ -2498,7 +2613,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000255597",
@@ -2602,7 +2722,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000253723",
@@ -2706,7 +2831,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000253330",
@@ -2810,7 +2940,12 @@
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T06:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260736",
@@ -2914,7 +3049,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260735",
@@ -3018,7 +3158,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260734",
@@ -3122,7 +3267,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260732",
@@ -3226,7 +3376,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pbandai-1000260731",
@@ -3330,7 +3485,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "おもちゃ"
+      "category": "おもちゃ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "fetch_failed",
+        "note": "p-bandai.jpの商品ページをWebFetchで取得できず(地域選択ページが返る)。受付状況は再確認できず、買取/成約価格も未確認。status等は変更せず"
+      }
     },
     {
       "id": "pokemoncard-edion-lucky-bag",
@@ -3454,7 +3614,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "onepiece-eb03-heroines-edition-dragonstar",
@@ -3566,7 +3731,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "EB-03 BOXの買取価格は検索結果に数値掲載なし(eBay出品価格のみで成約価格ではないため不使用)"
+      }
     },
     {
       "id": "suntory-hakushu-2026-amazon",
@@ -3670,7 +3840,12 @@
       ],
       "firstSeenAt": "2026-11-26T07:00:00Z",
       "lastSeenAt": "2026-11-26T07:00:00Z",
-      "category": "ウィスキー"
+      "category": "ウィスキー",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "dbfw-fb12-reach-the-god-box",
@@ -3770,7 +3945,12 @@
       ],
       "firstSeenAt": "2026-11-26T09:00:00Z",
       "lastSeenAt": "2026-11-26T09:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     },
     {
       "id": "onepiece-op18-dominance-of-god-box",
@@ -3870,7 +4050,12 @@
       ],
       "firstSeenAt": "2026-11-26T09:00:00Z",
       "lastSeenAt": "2026-11-26T09:00:00Z",
-      "category": "トレカ"
+      "category": "トレカ",
+      "resaleResearch": {
+        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "status": "not_found",
+        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+      }
     }
   ]
 }
