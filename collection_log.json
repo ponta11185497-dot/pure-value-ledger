@@ -1,434 +1,434 @@
 {
-  "lastRunAt": "2026-11-26T06:00:00Z",
+  "lastRunAt": "2026-11-26T05:15:26.125Z",
   "entries": [
     {
       "sourceId": "seed-1",
       "siteName": "ポケモンセンターオンライン",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
+      "lastRunAt": "2026-11-26T07:00:00Z",
       "resultType": "fetch_failed",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 1,
-      "errorDetail": "302リダイレクトで待機室(wr.pokemoncenter-online.com)へ誘導され本文を取得できず(クロスホストのため追従せず)"
+      "errorDetail": "WebFetchが待機室(wr.pokemoncenter-online.com)へ302リダイレクトされ内容を取得できず"
     },
     {
       "sourceId": "seed-2",
       "siteName": "プレミアムバンダイ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "トップページは海外向け案内のみで商品情報なし(個別商品はgunpla.blog経由で取得)"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-3",
       "siteName": "サントリー ウイスキー",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "HTTP 403 Forbidden"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-4",
       "siteName": "ロレックス正規店一覧",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "HTTP 403 Forbidden"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-5",
       "siteName": "マイニンテンドーストア",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "HTTP 403 Forbidden"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-6",
       "siteName": "Nike SNKRS",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 1,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "トップに価格・発売日時の記載なし(エア ジョーダン 4 Bredの通知案内のみ)"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-7",
       "siteName": "一番くじONLINE",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 8,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "ピックアップ8件の発売日は確認したが価格の記載がなく登録せず"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-8",
       "siteName": "駿河屋トレカ公式",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(同種の@pokecamatomeruで403/402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "seed-9",
       "siteName": "ヨドバシ公式",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(同種の@pokecamatomeruで403/402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1789677187858-96obs",
       "siteName": "https://snkrdunk.com/",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 15,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "新発売アイテムは市場表示価格のみで抽選・定価情報なし"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1789677267738-fibq3",
       "siteName": "https://cardchusen.com/",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 10,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "商品名・店舗・締切のみで価格・当選発表日なし。ハドウシーカー等は入荷Nowの情報で登録"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1789677315270-u9m1b",
       "siteName": "https://premium.gamepedia.jp/hobby/archives/category/%E6%8A%BD%E9%81%B8%E8%B2%A9%E5%A3%B2",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 10,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "記事一覧のみ確認。個別記事は未取得のため商品登録なし"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1789677337666-uiz37",
       "siteName": "https://nyuka-now.com/archives/category/chusen",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
+      "lastRunAt": "2026-11-26T07:00:00Z",
       "resultType": "ok",
       "fetchedCount": 10,
-      "newItemCount": 3,
+      "newItemCount": 2,
       "failedCount": 0,
-      "errorDetail": "まとめ記事のうちポケカ記事(archives/2459)のみ取得。他9記事は未取得"
+      "errorDetail": null
     },
     {
       "sourceId": "s-1790029030113-gker0",
       "siteName": "ポケモンカード公式",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "ok",
-      "fetchedCount": 1,
-      "newItemCount": 1,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
+      "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "ハドウシーカー発売日(11/27)のみ確認、価格記載なし"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030114-6a8km",
       "siteName": "遊戯王カードゲーム公式",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "地域選択ページのみ。日本向けページは未取得"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030115-8t9vh",
       "siteName": "ONE PIECEカードゲーム公式ショップ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 1,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "OP-18事前抽選のお知らせ見出しのみ。価格・期間はリンク先で未取得"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030116-k2muc",
       "siteName": "ドラゴンボールカード公式ショップ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "抽選・予約情報なし(通常商品の価格一覧のみ)"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030117-9xzfu",
       "siteName": "ヴァイスシュヴァルツ公式ストア",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "WS商品の予約・抽選なし(通常販売2件、バナー受注は商品名・価格不明)"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030118-juy1e",
       "siteName": "トレチュー(ポケカ・ワンピ・遊戯王横断まとめ)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 39,
+      "lastRunAt": "2026-11-26T07:00:00Z",
+      "resultType": "ok",
+      "fetchedCount": 11,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "39件の抽選は店舗別で価格・当選発表日の記載なし。商品登録せず"
+      "errorDetail": null
     },
     {
       "sourceId": "s-1790029030119-5o06m",
       "siteName": "人気トレカゲットナビ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "HTTP 403 Forbidden"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030120-yealj",
       "siteName": "@pokecamatomeru",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030121-ilmk1",
       "siteName": "@pokecayoyaku",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030122-c8bvj",
       "siteName": "@PokeGetInfoMain",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030123-2kdls",
       "siteName": "@pokecachan",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030124-byzh8",
       "siteName": "@dbfw_cardgameJP",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030125-2dieb",
       "siteName": "@wstcg",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030126-98qp1",
       "siteName": "タカラトミーモール公式(トミカ限定品)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "WebFetchタイムアウト(60秒)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030127-9o47z",
       "siteName": "プレバン予約速報(ガンプラ専門まとめ)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
+      "lastRunAt": "2026-11-26T07:00:00Z",
       "resultType": "ok",
-      "fetchedCount": 20,
-      "newItemCount": 20,
+      "fetchedCount": 10,
+      "newItemCount": 5,
       "failedCount": 0,
-      "errorDetail": "受付中107件のうち先頭20件(重複1件除く)を登録。残り約87件は未取得"
+      "errorDetail": "一覧107件中先頭10件のみ確認"
     },
     {
       "sourceId": "s-1790029030128-nbze2",
       "siteName": "グッドスマイルカンパニー公式ショップ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030129-zlrng",
       "siteName": "カホタン(新作予約情報)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "Xアカウント。WebFetchではx.comの取得不可(@pokecamatomeruで402を確認。個別には未試行)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030130-iy2p4",
       "siteName": "グルメWatch(イオン等の山崎・白州・響抽選速報)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
+      "lastRunAt": "2026-11-26T07:00:00Z",
       "resultType": "ok",
       "fetchedCount": 4,
       "newItemCount": 1,
       "failedCount": 0,
-      "errorDetail": "4件の抽選記事を確認。価格の明記された響JHのみ登録"
+      "errorDetail": null
     },
     {
       "sourceId": "s-1790029030131-8rkuv",
       "siteName": "ニッカウヰスキー公式",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "抽選・限定発売の記載なし"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030132-om2q8",
       "siteName": "ノリフネ(日本ウイスキー購入方法まとめ)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "記事見出しのみで商品・価格・期間の記載なし"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030133-sf7rn",
       "siteName": "申込可能なウイスキー抽選まとめ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
+      "lastRunAt": "2026-11-26T07:00:00Z",
       "resultType": "empty_confirmed",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "見出しのみで商品情報なし(まとめ記事blog/738は未取得)"
+      "errorDetail": "トップは記事一覧のみ。まとめ記事 /blog/738 は未取得"
     },
     {
       "sourceId": "s-1790029030134-713dg",
       "siteName": "高島屋(アプリ限定抽選あり)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "WebFetchタイムアウト(60秒)"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030135-h1zby",
       "siteName": "Supreme公式(日本)",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "トップに商品情報なし(JS描画の可能性)"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030136-tgsam",
       "siteName": "Supreme等のWeb抽選応募方法・締切解説",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "empty_confirmed",
-      "fetchedCount": 10,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
       "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "取得できた記事は2022年頃の古い情報で現在の抽選ではないため登録せず"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030137-5w1a7",
       "siteName": "Supreme等の抽選開催を速報",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "ok",
-      "fetchedCount": 16,
-      "newItemCount": 2,
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
+      "fetchedCount": 0,
+      "newItemCount": 0,
       "failedCount": 0,
-      "errorDetail": "16件の見出しを確認。品番・価格を記事で確認したTravis Scott AF1(2色)のみ登録"
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     },
     {
       "sourceId": "s-1790029030138-jfvgr",
       "siteName": "adidas公式CONFIRMEDアプリ案内ページ",
       "collectMethod": "ai-webfetch",
-      "lastRunAt": "2026-11-26T06:00:00Z",
-      "resultType": "fetch_failed",
+      "lastRunAt": "2026-11-26T05:15:26.125Z",
+      "resultType": "pending_ai",
       "fetchedCount": 0,
       "newItemCount": 0,
-      "failedCount": 1,
-      "errorDetail": "HTTP 403 Forbidden"
+      "failedCount": 0,
+      "errorDetail": "今回の実行では未処理(次回以降に持ち越し)"
     }
   ]
 }
