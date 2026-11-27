@@ -29,24 +29,41 @@
         "source": null
       },
       "estimatedResalePrice": {
-        "value": null,
-        "source": null
+        "value": 7300,
+        "source": {
+          "siteName": "PRICE BASE(取引相場を集計した第三者サイト・2026-11-27時点・発売当日)",
+          "url": "https://price-base.com/useful/?p=323685",
+          "fetchedAt": "2026-11-27T00:00:00Z"
+        },
+        "confidence": "estimated"
       },
       "platformFee": {
-        "value": null,
-        "source": null
+        "value": 730,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(既定手数料率10%を仮定)",
+          "url": null,
+          "fetchedAt": "2026-11-27T09:23:21.544Z"
+        }
       },
       "shippingFee": {
         "value": null,
         "source": null
       },
       "estimatedNetProfit": {
-        "value": null,
-        "source": null
+        "value": 570,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
+          "url": null,
+          "fetchedAt": "2026-11-27T09:23:21.544Z"
+        }
       },
       "profitMarginPct": {
-        "value": null,
-        "source": null
+        "value": 9.5,
+        "source": {
+          "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
+          "url": null,
+          "fetchedAt": "2026-11-27T09:23:21.544Z"
+        }
       },
       "anaMiles": {
         "value": 90,
@@ -112,15 +129,25 @@
             "url": "https://nyuka-now.com/archives/2459",
             "fetchedAt": "2026-11-26T06:00:00Z"
           }
+        },
+        {
+          "date": "2026-11-27",
+          "field": "estimatedResalePrice",
+          "value": 7300,
+          "source": {
+            "siteName": "PRICE BASE(取引相場を集計した第三者サイト・2026-11-27時点・発売当日)",
+            "url": "https://price-base.com/useful/?p=323685",
+            "fetchedAt": "2026-11-27T00:00:00Z"
+          }
         }
       ],
       "firstSeenAt": "2026-11-26T06:00:00Z",
       "lastSeenAt": "2026-11-26T09:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-27T00:00:00Z",
         "status": "not_found",
-        "note": "2026-11-27発売前(PRICE BASEで買取価格未掲載、定価6,000円)。類似商品の初動相場の根拠となる確認済み値がないため推定値は設定せず"
+        "note": "専門買取業者の買取価格・成約実績は確認できず。PRICE BASEの最新取引相場7,300円(2026-11-27)を第三者集計のためestimatedで記録"
       }
     },
     {
@@ -175,7 +202,7 @@
         "source": {
           "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
           "url": null,
-          "fetchedAt": "2026-11-26T06:00:51.682Z"
+          "fetchedAt": "2026-11-27T09:23:21.544Z"
         }
       },
       "profitMarginPct": {
@@ -183,7 +210,7 @@
         "source": {
           "siteName": "自動計算(computeFinancials.js)(基準: estimatedResalePrice)",
           "url": null,
-          "fetchedAt": "2026-11-26T06:00:51.682Z"
+          "fetchedAt": "2026-11-27T09:23:21.544Z"
         }
       },
       "anaMiles": {
@@ -360,9 +387,9 @@
       "lastSeenAt": "2026-11-26T07:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-27T00:00:00Z",
         "status": "not_found",
-        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+        "note": "ゆうゆう亭に買取ページはあるが検索結果に価格数値なし。値は変更せず"
       }
     },
     {
@@ -3760,9 +3787,9 @@
       "lastSeenAt": "2026-11-26T07:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-27T00:00:00Z",
         "status": "not_found",
-        "note": "EB-03 BOXの買取価格は検索結果に数値掲載なし(eBay出品価格のみで成約価格ではないため不使用)"
+        "note": "PRICE BASEの価格は年不明(10月時点5,400円~)で採用せず。買取価格・成約実績は確認できず"
       }
     },
     {
@@ -3974,9 +4001,9 @@
       "lastSeenAt": "2026-11-26T09:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-27T00:00:00Z",
         "status": "not_found",
-        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+        "note": "発売前(2026-12-12予定)。買取/成約実績なし。同シリーズ初動相場の確認済み値も得られず推定値は設定せず"
       }
     },
     {
@@ -4006,8 +4033,13 @@
         "source": null
       },
       "estimatedResalePrice": {
-        "value": null,
-        "source": null
+        "value": 8200,
+        "source": {
+          "siteName": "PRICE BASE(取引相場を集計した第三者サイト・2026-11時点)",
+          "url": "https://price-base.com/useful/?p=314114",
+          "fetchedAt": "2026-11-27T00:00:00Z"
+        },
+        "confidence": "estimated"
       },
       "platformFee": {
         "value": null,
@@ -4073,15 +4105,25 @@
             "url": "https://gamewith.jp/gaming-pc/587442",
             "fetchedAt": "2026-11-26T09:00:00Z"
           }
+        },
+        {
+          "date": "2026-11-27",
+          "field": "estimatedResalePrice",
+          "value": 8200,
+          "source": {
+            "siteName": "PRICE BASE(取引相場を集計した第三者サイト・2026-11時点)",
+            "url": "https://price-base.com/useful/?p=314114",
+            "fetchedAt": "2026-11-27T00:00:00Z"
+          }
         }
       ],
       "firstSeenAt": "2026-11-26T09:00:00Z",
       "lastSeenAt": "2026-11-26T09:00:00Z",
       "category": "トレカ",
       "resaleResearch": {
-        "lastAttemptAt": "2026-11-26T12:00:00Z",
+        "lastAttemptAt": "2026-11-27T00:00:00Z",
         "status": "not_found",
-        "note": "検索回数制限のため専門買取業者・成約実績を確認できず(未調査寄り)。値は変更せず"
+        "note": "専門買取業者の買取価格・成約実績は確認できず。PRICE BASEの最新取引相場8,200円(2026-11)を第三者集計のためestimatedで記録"
       }
     }
   ]
